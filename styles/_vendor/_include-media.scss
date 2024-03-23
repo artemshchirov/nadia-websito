@@ -72,7 +72,7 @@ $media-expressions: (
 ///
 /// @example scss - Interval for rems is defined as `0.1` by default, to be used with `font-size: 62.5%;`
 ///  @include media('>2.0rem') {}
-///
+
 ///  /* Generates: */
 ///  @media (min-width: 2.1rem) {}
 ///
@@ -529,10 +529,7 @@ $im-no-media-expressions: ("screen", "portrait", "landscape") !default;
 
   // Update global configuration
   $breakpoints: map-merge($breakpoints, $tweakpoints) !global;
-  $media-expressions: map-merge(
-    $media-expressions,
-    $tweak-media-expressions
-  ) !global;
+  $media-expressions: map-merge($media-expressions, $tweak-media-expressions) !global;
 
   @content;
 
