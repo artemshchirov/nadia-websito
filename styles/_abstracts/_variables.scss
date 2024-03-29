@@ -1,17 +1,46 @@
-// colors
+$transition: opacity 0.2s;
+
+$z-indexes: ("level-six", "level-five", "level-four", "level-three", "level-two", "level-one");
+
+// *** COLORS ***
 $col-black: #0c0c0e;
 $col-white: #ffffff;
 $col-grey: #6b6b6b;
 
-// fonts
-$font-mori: "PP Mori", Arial, Helvetica, sans-serif;
+$col-bg: $col-white;
+$col-primary: $col-black;
+// *** COLORS END ***
 
-// z-indexes
-$z-indexes: (
-  "level-six",
-  "level-five",
-  "level-four",
-  "level-three",
-  "level-two",
-  "level-one"
+// *** FONTS ***
+$font-creato-display: "Creato Display", Arial, Helvetica, sans-serif;
+
+$font-color-primary: $col-black;
+
+$font-size-mobile: calc(
+  14px + (15 - 14) *
+    (
+      (100vw - #{map-get($breakpoints, "mobile")}) /
+        (#{map-get($breakpointsInt, "tablet")} - #{map-get($breakpointsInt, "mobile")})
+    )
 );
+
+$font-size-tablet: calc(
+  15px + (13 - 15) *
+    (
+      (100vw - #{map-get($breakpoints, "tablet")}) /
+        (#{map-get($breakpointsInt, "desktop")} - #{map-get($breakpointsInt, "tablet")})
+    )
+);
+
+$font-size-desktop: calc(
+  13px + (16 - 13) *
+    (
+      (100vw - #{map-get($breakpoints, "desktop")}) /
+        (#{map-get($breakpointsInt, "largeScreen")} - #{map-get($breakpointsInt, "desktop")})
+    )
+);
+
+$font-size-largeScreen: 16px;
+
+$font-size-largeScreen: 16px;
+// *** FONTS END ***

@@ -1,0 +1,126 @@
+.header {
+  padding-right: 10px; // TODO: move to page css for whole website
+  padding-left: 10px;
+  padding-top: calc(40px + (20 - 40) * ((100vw - 360px) / (768 - 360)));
+  padding-bottom: calc(40px + (20 - 40) * ((100vw - 360px) / (768 - 360)));
+  color: $font-color-primary;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: $font-size-mobile;
+
+  @include media(">=tablet") {
+    font-size: $font-size-tablet;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @include media(">=desktop") {
+    font-size: $font-size-desktop;
+    padding-top: calc(20px + (40 - 20) * ((100vw - 1440px) / (1920 - 1440)));
+    padding-bottom: calc(20px + (40 - 20) * ((100vw - 1440px) / (1920 - 1440)));
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: $font-size-largeScreen;
+  }
+
+  &__wrapper {
+    @include flex(space-between, start);
+    width: 100%;
+
+    @include media(">=tablet") {
+      max-width: calc(305px + (518 - 305) * ((100vw - 768px) / (1440 - 768)));
+      margin-right: calc(70px + (110 - 70) * ((100vw - 768px) / (1440 - 768)));
+      margin-left: auto;
+    }
+
+    @include media(">=desktop") {
+      max-width: calc(498px + (646 - 498) * ((100vw - 1440px) / (1920 - 1440)));
+      margin-right: calc(110px + (190 - 110) * ((100vw - 1440px) / (1920 - 1440)));
+    }
+
+    @include media(">=largeScreen") {
+      max-width: 646px;
+      margin-right: 190px;
+    }
+  }
+
+  &__container {
+    width: 100%;
+
+    @include media(">=tablet") {
+      max-width: max-content;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
+    max-width: max-content;
+    font-size: $font-size-mobile;
+
+    @include media(">=tablet") {
+      font-size: $font-size-tablet;
+    }
+
+    @include media(">=desktop") {
+      font-size: $font-size-desktop;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: $font-size-largeScreen;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+
+  &__btn {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: $font-size-mobile;
+
+    @include media(">=tablet") {
+      font-size: $font-size-tablet;
+    }
+
+    @include media(">=desktop") {
+      font-size: $font-size-desktop;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: $font-size-largeScreen;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: $transition;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &::before {
+      content: "[";
+      left: 0;
+      transform: translateX(-100%) translateY(-5%);
+    }
+
+    &::after {
+      content: "]";
+      right: 0;
+      transform: translateX(100%) translateY(-5%);
+    }
+  }
+}

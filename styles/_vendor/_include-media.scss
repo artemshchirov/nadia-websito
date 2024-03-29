@@ -27,9 +27,17 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: (
-  "mobile": 700px,
-  "tablet": 950px,
+  "mobile": 360px,
+  "tablet": 768px,
   "desktop": 1440px,
+  "largeScreen": 1920px,
+) !default;
+
+$breakpointsInt: (
+  "mobile": 360,
+  "tablet": 768,
+  "desktop": 1440,
+  "largeScreen": 1920,
 ) !default;
 
 ///

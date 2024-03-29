@@ -1,11 +1,12 @@
-<template>
-  <Hello />
-</template>
-
 <script setup lang="ts">
-import { Interactions } from "@/interactions";
+// import { Interactions } from "@/interactions";
 
-onMounted(() => {
-  new Interactions();
-});
+// onMounted(() => {
+//   new Interactions();
+// });
 </script>
+
+<template>
+  <Header />
+  <!-- <Hello /> -->
+</template>
