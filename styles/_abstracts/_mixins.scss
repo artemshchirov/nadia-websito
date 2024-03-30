@@ -1,14 +1,17 @@
 /* flexbox */
-@mixin flex($justify: flex-start, $align: flex-start, $gap: 0) {
+@mixin flex($justify: flex-start, $align: flex-start, $gap: 0, $direction: row) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
   gap: $gap;
+  flex-direction: $direction;
 }
 
 /* grid */
-@mixin grid($columns: 1fr, $gap: 0, $items: center) {
+@mixin grid($columns: 1fr, $rows: 1fr, $gap: 0, $items: center) {
   display: grid;
   place-items: $items;
   grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
 }

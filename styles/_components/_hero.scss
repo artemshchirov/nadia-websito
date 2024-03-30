@@ -1,0 +1,142 @@
+.hero {
+  color: $font-color-primary;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: $font-size-mobile;
+  padding-top: calc(60px + (218 - 60) * ((100vw - 360px) / (768 - 360)));
+
+  @include media(">=tablet") {
+    font-size: $font-size-tablet;
+    padding-top: calc(218px + (224 - 218) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  @include media(">=desktop") {
+    font-size: $font-size-desktop;
+    padding-top: calc(224px + (280 - 224) * ((100vw - 1440px) / (1920 - 1440)));
+  }
+
+  @include media(">=largeScreen") {
+    font-size: $font-size-largeScreen;
+    padding-top: 280px;
+  }
+
+  &__wrapper {
+    @include flex(space-between, start);
+    width: 100%;
+    padding-top: calc(213px + (272 - 213) * ((100vw - 360px) / (768 - 360)));
+
+    @include media(">=tablet") {
+      font-size: $font-size-tablet;
+      padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
+    }
+
+    @include media(">=desktop") {
+      font-size: $font-size-desktop;
+      padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
+    }
+
+    @include media(">=largeScreen") {
+      font-size: $font-size-largeScreen;
+      padding-top: 403px;
+    }
+  }
+
+  &__title {
+    width: 100%;
+  }
+
+  &__container {
+    width: 100%;
+    @include flex(space-between, start, 0, column);
+
+    @include media(">=tablet") {
+      @include flex(space-between, start, 0);
+      max-width: calc(311px + (506 - 311) * ((100vw - 768px) / (1440 - 768)));
+      margin-right: calc(63px + (122 - 63) * ((100vw - 768px) / (1440 - 768)));
+    }
+
+    @include media(">=desktop") {
+      max-width: calc(506px + (657 - 506) * ((100vw - 1440px) / (1920 - 1440)));
+      margin-right: calc(122px + (178 - 122) * ((100vw - 1440px) / (1920 - 1440)));
+    }
+
+    @include media(">=largeScreen") {
+      max-width: 657px;
+      margin-right: 178px;
+    }
+  }
+
+  &__contact {
+    white-space: nowrap;
+    min-width: max-content;
+  }
+}
+
+.gallery {
+  @include grid(repeat(4, auto), auto, 0, start);
+
+  @include media(">=tablet") {
+    grid-template-columns:
+      repeat(2, minmax(94.5px, auto))
+      repeat(2, minmax(92.5px, auto))
+      repeat(2, minmax(92px, auto))
+      repeat(2, minmax(92.5px, auto));
+  }
+
+  @include media(">=desktop") {
+    grid-template-columns:
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(116px, auto));
+  }
+
+  &__item {
+    grid-column: span 2;
+    overflow-y: hidden;
+
+    &_first {
+      transform: translateY(-50%);
+    }
+
+    &_third {
+      margin-top: auto;
+      transform: translateY(100%);
+    }
+
+    &_fourth {
+      margin-top: auto;
+    }
+
+    &_fifth {
+      transform: translateY(-50%);
+    }
+
+    &_sixth {
+      @include media(">=desktop") {
+        transform: translateY(calc(76.5px - (-101 - -76.5) * ((100vw - 1440px) / (1920 - 1440))));
+      }
+    }
+
+    &_seventh {
+      grid-column: span 2;
+    }
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.crop {
+  margin-bottom: -10px;
+
+  @include media(">=desktop") {
+    margin-bottom: 0;
+  }
+}

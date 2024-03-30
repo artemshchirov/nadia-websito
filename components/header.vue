@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header section">
     <div class="header__wrapper">
       <nav class="nav">
         <button class="nav__btn">Menu</button>

@@ -1,6 +1,4 @@
 .header {
-  padding-right: 10px; // TODO: move to page css for whole website
-  padding-left: 10px;
   padding-top: calc(40px + (20 - 40) * ((100vw - 360px) / (768 - 360)));
   padding-bottom: calc(40px + (20 - 40) * ((100vw - 360px) / (768 - 360)));
   color: $font-color-primary;
@@ -21,9 +19,9 @@
   }
 
   @include media(">=largeScreen") {
+    font-size: $font-size-largeScreen;
     padding-top: 40px;
     padding-bottom: 40px;
-    font-size: $font-size-largeScreen;
   }
 
   &__wrapper {
@@ -31,14 +29,14 @@
     width: 100%;
 
     @include media(">=tablet") {
-      max-width: calc(305px + (518 - 305) * ((100vw - 768px) / (1440 - 768)));
-      margin-right: calc(70px + (110 - 70) * ((100vw - 768px) / (1440 - 768)));
+      max-width: calc(305px + (498 - 305) * ((100vw - 768px) / (1440 - 768)));
+      margin-right: calc(70px + (130 - 70) * ((100vw - 768px) / (1440 - 768)));
       margin-left: auto;
     }
 
     @include media(">=desktop") {
       max-width: calc(498px + (646 - 498) * ((100vw - 1440px) / (1920 - 1440)));
-      margin-right: calc(110px + (190 - 110) * ((100vw - 1440px) / (1920 - 1440)));
+      margin-right: calc(130px + (190 - 130) * ((100vw - 1440px) / (1920 - 1440)));
     }
 
     @include media(">=largeScreen") {
