@@ -16,7 +16,7 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: `${process.env.BASE_URL}/og.webp`,
+          content: `https://ik.imagekit.io/webbuilder/nadia-websito/hero/hero_7_IgFYZp99K.webp?updatedAt=1711722905279`,
         },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
