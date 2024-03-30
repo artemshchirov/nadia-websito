@@ -1,4 +1,4 @@
-# Nuxt - Gsap Starter Template
+# PHOTO PORTFOLIO GALLERY
 
 - NUXT Version 3 💚
 - GSAP Classes Setup 🧩
@@ -6,6 +6,23 @@
 - SASS 7-1 Architecture 🛠️
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+
+## TODO
+
+- [ ] Grid Setup
+- [ ] Confirm buttons and links transitions
+- [ ] Header
+- [ ] Hero
+- [ ] About
+- [ ] Images 1
+- [ ] Pricing
+- [ ] Images 2
+- [ ] Reviews
+- [ ] Images 3
+- [ ] FAQ
+- [ ] Footer
+- [ ] Nav menu
+- [ ] All responsive
 
 ## Setup
 
@@ -66,9 +83,3 @@ yarn preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Deploy On Brimble
-
-<a href="https://nuxt-gsap-starter.brimble.app">
-<img src="https://res.cloudinary.com/dgqfojhx4/image/upload/v1692011166/brimble-assets/badge_fuuq5i.png" alt="Brimble badge"/>
-</a>
