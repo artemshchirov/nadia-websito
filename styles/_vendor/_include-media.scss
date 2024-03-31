@@ -33,13 +33,6 @@ $breakpoints: (
   "largeScreen": 1920px,
 ) !default;
 
-$breakpointsInt: (
-  "mobile": 360,
-  "tablet": 768,
-  "desktop": 1440,
-  "largeScreen": 1920,
-) !default;
-
 ///
 /// Creates a list of static expressions or media types
 ///

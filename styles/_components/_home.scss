@@ -1,0 +1,204 @@
+.page {
+  @include font-responsive;
+  color: $font-color-primary;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-top: dynamic-size(40, 20, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: 20px;
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(20, 40, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 40px;
+  }
+}
+
+.title {
+  grid-column: 3 / span 2;
+  padding-bottom: dynamic-size(100, 218, "mobile");
+
+  @include media(">=tablet") {
+    grid-column: 7 / span 2;
+    padding-bottom: dynamic-size(218, 228, "tablet");
+  }
+
+  @include media(">=desktop") {
+    grid-column: 13 / span 2;
+    padding-bottom: dynamic-size(228, 301, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-bottom: 301px;
+  }
+}
+
+.home {
+  @include grid-home;
+
+  &__hero {
+    overflow-y: hidden;
+    grid-column: span 2;
+
+    &:nth-child(3) {
+      // 1 hero image
+      transform: translateY(-50%);
+      display: none;
+
+      @include media(">=tablet") {
+        display: block;
+      }
+
+      @include media(">=desktop") {
+        grid-column: 1 / span 2;
+      }
+    }
+
+    &:nth-child(4) {
+      // 2 hero image
+      grid-column: 1 / span 2;
+
+      @include media(">=tablet") {
+        grid-column: 3 / span 2;
+      }
+    }
+
+    &:nth-child(5) {
+      // 3 hero image
+      grid-column: 3 / span 2;
+      margin-top: auto;
+      transform: translateY(100%);
+
+      @include media(">=tablet") {
+        grid-column: 5 / span 2;
+      }
+    }
+
+    &:nth-child(6) {
+      // 4 hero image
+      display: none;
+      margin-top: auto;
+
+      @include media(">=tablet") {
+        display: block;
+        grid-column: 7 / span 2;
+      }
+    }
+
+    &:nth-child(7) {
+      // 5 hero image
+      transform: translateY(-50%);
+      display: none;
+
+      @include media(">=desktop") {
+        display: block;
+      }
+    }
+
+    &:nth-child(8) {
+      // 6 hero image
+      display: none;
+
+      @include media(">=desktop") {
+        $YAxis: calc(76.5px - (-101 + 76.5) * ((100vw - 1440px) / (1920 - 1440)));
+
+        display: block;
+        transform: translateY($YAxis);
+      }
+    }
+
+    &:nth-child(9) {
+      // 7 hero image
+      display: none;
+
+      @include media(">=desktop") {
+        display: block;
+      }
+    }
+  }
+}
+
+.role {
+  grid-column: 1;
+  padding-top: dynamic-size(213, 272, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: dynamic-size(272, 306, "tablet");
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}
+
+.location {
+  grid-column: 3 / span 2;
+  padding-top: dynamic-size(213, 272, "mobile");
+
+  @include media(">=tablet") {
+    grid-column: 5 / span 2;
+    padding-top: dynamic-size(272, 306, "tablet");
+  }
+
+  @include media(">=desktop") {
+    grid-column: 7 / span 2;
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}
+
+.phone {
+  grid-column: 3 / span 2;
+
+  @include media(">=tablet") {
+    grid-column: 7 / span 2;
+    padding-top: dynamic-size(272, 306, "tablet");
+
+    @include media(">=desktop") {
+      grid-column: 13 / span 2;
+      padding-top: dynamic-size(306, 403, "desktop");
+    }
+    @include media(">=largeScreen") {
+      padding-top: 403px;
+    }
+  }
+}
+
+.portrait {
+  @include section-top-divider;
+
+  grid-column: 3;
+
+  @include media(">=tablet") {
+    grid-column: 5 / span 2;
+  }
+
+  @include media(">=desktop") {
+    grid-column: 7 / span 2;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.crop {
+  margin-bottom: -10px;
+
+  @include media(">=desktop") {
+    margin-bottom: 0;
+  }
+}
