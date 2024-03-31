@@ -22,6 +22,7 @@ const displayedImages = computed(() => {
 <template>
   <section class="hero section">
     <ul class="gallery">
+      <Header />
       <li :class="['gallery__item', image.style]" v-for="image in displayedImages" :key="image.id">
         <NuxtImg
           :class="['gallery__image', image.isCropped ? 'crop' : '']"
@@ -29,15 +30,17 @@ const displayedImages = computed(() => {
           :alt="image.alt"
         />
       </li>
+
+      <h1 class="hero__title">Photographer:</h1>
+
+      <p class="hero__location">Haifa/Israel</p>
+      <p class="hero__phone">+(972)54-902-91-91</p>
+
+      <NuxtImg
+        class="gallery__image portrait"
+        src="https://ik.imagekit.io/webbuilder/nadia-websito/about/about-1_DnGSsOSxx.webp?updatedAt=1711886498930"
+        alt="Nadia"
+      />
     </ul>
-    <div class="hero__wrapper">
-      <div class="hero__title">
-        <h1 class="hero__title-text">Photographer:</h1>
-      </div>
-      <div class="hero__container">
-        <p class="hero__contact">Haifa/Israel</p>
-        <p class="hero__contact">+(972)54-902-91-91</p>
-      </div>
-    </div>
   </section>
 </template>

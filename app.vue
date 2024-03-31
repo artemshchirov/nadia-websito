@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <Header />
+  <!-- <Header /> -->
   <Hero />
 </template>
 

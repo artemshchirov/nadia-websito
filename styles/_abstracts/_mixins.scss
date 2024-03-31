@@ -8,7 +8,7 @@
 }
 
 /* grid */
-@mixin grid($columns: 1fr, $rows: 1fr, $gap: 0, $items: center) {
+@mixin grid($columns: auto, $rows: auto, $gap: 0, $items: start) {
   display: grid;
   place-items: $items;
   grid-template-columns: $columns;

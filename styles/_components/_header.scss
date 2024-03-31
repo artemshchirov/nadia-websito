@@ -6,68 +6,63 @@
   font-weight: 400;
   font-size: $font-size-mobile;
 
+  // @include grid(repeat(4, 1fr), 1fr, 0, start);
+
   @include media(">=tablet") {
     font-size: $font-size-tablet;
-    padding-top: 20px;
+
     padding-bottom: 20px;
+
+    grid-template-columns:
+      repeat(2, minmax(94.5px, auto))
+      repeat(2, minmax(92.5px, auto))
+      repeat(2, minmax(92px, auto))
+      repeat(2, minmax(92.5px, auto));
   }
 
   @include media(">=desktop") {
     font-size: $font-size-desktop;
-    padding-top: calc(20px + (40 - 20) * ((100vw - 1440px) / (1920 - 1440)));
+
     padding-bottom: calc(20px + (40 - 20) * ((100vw - 1440px) / (1920 - 1440)));
+
+    grid-template-columns:
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(116px, auto));
   }
 
   @include media(">=largeScreen") {
     font-size: $font-size-largeScreen;
-    padding-top: 40px;
     padding-bottom: 40px;
   }
 
-  &__wrapper {
-    @include flex(space-between, start);
-    width: 100%;
-
-    @include media(">=tablet") {
-      max-width: calc(305px + (498 - 305) * ((100vw - 768px) / (1440 - 768)));
-      margin-right: calc(70px + (130 - 70) * ((100vw - 768px) / (1440 - 768)));
-      margin-left: auto;
-    }
-
-    @include media(">=desktop") {
-      max-width: calc(498px + (646 - 498) * ((100vw - 1440px) / (1920 - 1440)));
-      margin-right: calc(130px + (190 - 130) * ((100vw - 1440px) / (1920 - 1440)));
-    }
-
-    @include media(">=largeScreen") {
-      max-width: 646px;
-      margin-right: 190px;
-    }
-  }
-
-  &__container {
-    width: 100%;
-
-    @include media(">=tablet") {
-      max-width: max-content;
-    }
+  @include media(">=largeScreen") {
   }
 
   &__title {
     white-space: nowrap;
     max-width: max-content;
     font-size: $font-size-mobile;
+    grid-column: 3 / span 2;
+
+    padding-bottom: calc(100px + (218 - 100) * ((100vw - 360px) / (768 - 360)));
 
     @include media(">=tablet") {
-      font-size: $font-size-tablet;
+      grid-column: 7 / span 2;
+      padding-bottom: calc(218px + (228 - 218) * ((100vw - 768px) / (1440 - 768)));
     }
 
     @include media(">=desktop") {
-      font-size: $font-size-desktop;
+      grid-column: 13 / span 2;
+      padding-bottom: calc(228px + (301 - 228) * ((100vw - 1440px) / (1920 - 1440)));
     }
 
     @include media(">=largeScreen") {
-      font-size: $font-size-largeScreen;
+      padding-bottom: 301px;
     }
   }
 }
@@ -75,6 +70,15 @@
 .nav {
   display: flex;
   width: 100%;
+  grid-column: 1 / span 2;
+
+  @include media(">=tablet") {
+    grid-column: 5 / span 2;
+  }
+
+  @include media(">=desktop") {
+    grid-column: 9 / span 2;
+  }
 
   &__btn {
     position: relative;
