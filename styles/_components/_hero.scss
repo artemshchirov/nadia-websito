@@ -19,60 +19,6 @@
     font-size: $font-size-largeScreen;
     padding-top: 40px;
   }
-
-  &__title {
-    grid-column: 1;
-
-    padding-top: calc(213px + (272 - 213) * ((100vw - 360px) / (768 - 360)));
-
-    @include media(">=tablet") {
-      padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
-    }
-
-    @include media(">=desktop") {
-      padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
-    }
-
-    @include media(">=largeScreen") {
-      padding-top: 403px;
-    }
-  }
-
-  &__location {
-    grid-column: 3 / span 2;
-    padding-top: calc(213px + (272 - 213) * ((100vw - 360px) / (768 - 360)));
-
-    @include media(">=tablet") {
-      grid-column: 5 / span 2;
-      padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
-    }
-
-    @include media(">=desktop") {
-      grid-column: 9 / span 2;
-      padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
-    }
-
-    @include media(">=largeScreen") {
-      padding-top: 403px;
-    }
-  }
-
-  &__phone {
-    grid-column: 3 / span 2;
-
-    @include media(">=tablet") {
-      grid-column: 7 / span 2;
-      padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
-
-      @include media(">=desktop") {
-        grid-column: 13 / span 2;
-        padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
-      }
-      @include media(">=largeScreen") {
-        padding-top: 403px;
-      }
-    }
-  }
 }
 
 .gallery {
@@ -101,15 +47,22 @@
     overflow-y: hidden;
     grid-column: span 2;
 
-    &_first {
+    &:nth-child(3) {
+      // 1st hero gallery <li> image
       transform: translateY(-50%);
+      display: none;
+
+      @include media(">=tablet") {
+        display: block;
+      }
 
       @include media(">=desktop") {
         grid-column: 1 / span 2;
       }
     }
 
-    &_second {
+    &:nth-child(4) {
+      // 2
       grid-column: 1 / span 2;
 
       @include media(">=tablet") {
@@ -117,7 +70,8 @@
       }
     }
 
-    &_third {
+    &:nth-child(5) {
+      // 3
       grid-column: 3 / span 2;
       margin-top: auto;
       transform: translateY(100%);
@@ -127,21 +81,43 @@
       }
     }
 
-    &_fourth {
+    &:nth-child(6) {
+      // 4
+      display: none;
       margin-top: auto;
 
       @include media(">=tablet") {
+        display: block;
         grid-column: 7 / span 2;
       }
     }
 
-    &_fifth {
+    &:nth-child(7) {
+      // 5
       transform: translateY(-50%);
+      display: none;
+
+      @include media(">=desktop") {
+        display: block;
+      }
     }
 
-    &_sixth {
+    &:nth-child(8) {
+      // 6
+      display: none;
+
       @include media(">=desktop") {
+        display: block;
         transform: translateY(calc(76.5px - (-101 - -76.5) * ((100vw - 1440px) / (1920 - 1440))));
+      }
+    }
+
+    &:nth-child(9) {
+      // 7
+      display: none;
+
+      @include media(">=desktop") {
+        display: block;
       }
     }
   }
@@ -158,6 +134,24 @@
 
   @include media(">=desktop") {
     margin-bottom: 0;
+  }
+}
+
+.title {
+  grid-column: 1;
+
+  padding-top: calc(213px + (272 - 213) * ((100vw - 360px) / (768 - 360)));
+
+  @include media(">=tablet") {
+    padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  @include media(">=desktop") {
+    padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
   }
 }
 
@@ -180,5 +174,41 @@
   @include media(">=largeScreen") {
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+}
+
+.location {
+  grid-column: 3 / span 2;
+  padding-top: calc(213px + (272 - 213) * ((100vw - 360px) / (768 - 360)));
+
+  @include media(">=tablet") {
+    grid-column: 5 / span 2;
+    padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
+  }
+
+  @include media(">=desktop") {
+    grid-column: 7 / span 2;
+    padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}
+
+.phone {
+  grid-column: 3 / span 2;
+
+  @include media(">=tablet") {
+    grid-column: 7 / span 2;
+    padding-top: calc(272px + (306 - 272) * ((100vw - 768px) / (1440 - 768)));
+
+    @include media(">=desktop") {
+      grid-column: 13 / span 2;
+      padding-top: calc(306px + (403 - 306) * ((100vw - 1440px) / (1920 - 1440)));
+    }
+    @include media(">=largeScreen") {
+      padding-top: 403px;
+    }
   }
 }
