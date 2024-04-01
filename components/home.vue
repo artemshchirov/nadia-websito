@@ -43,7 +43,6 @@ import { heroImagesArray } from "@/constants/hero-images";
       <!-- DIVIDER END -->
 
       <!-- ABOUT -->
-
       <h1 class="name">Nadya Besson</h1>
 
       <NuxtImg
@@ -72,9 +71,22 @@ import { heroImagesArray } from "@/constants/hero-images";
         momentary. From portraits to family stories, each frame tells its unique tale. Let&rsquo;s
         create something special together.
       </div>
-
       <!-- ABOUT END -->
+
+      <!-- <NuxtImg
+        class="image portrait"
+        src="https://ik.imagekit.io/webbuilder/nadia-websito/about/about-1_DnGSsOSxx.webp?updatedAt=1711886498930"
+        alt="Nadia"
+      /> -->
+      <div class="divider-1" />
+      <div class="divider-2" />
+      <div class="divider-3" />
+      <!-- <div class="divider-4" />
+      <div class="divider-5" />
+      <div class="divider-6" />
+      <div class="divider-7" />
+      <div class="divider-8" />
+      <div class="divider-9" /> -->
     </div>
-    <div class="divider" />
   </section>
 </template>

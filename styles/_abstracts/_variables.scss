@@ -12,9 +12,21 @@ $col-primary: $col-black;
 // *** COLORS END ***
 
 // *** PAGE GRID ***
-
 @mixin grid-main {
   @include grid(repeat(4, 1fr), auto, 0, start);
+  grid-template-areas:
+    "nav . title title"
+    "image-2 image-2 image-3 image-3"
+    "role . location location"
+    ". . phone phone"
+    "divider-1 . . ."
+    ". . image-8 ."
+    "divider-2 . . ."
+    ". name name ."
+    "image-9 . . ."
+    ". details details details"
+    ". bio bio bio"
+    "divider-3 . . .";
 
   @include media(">=tablet") {
     grid-template-columns:
@@ -22,6 +34,10 @@ $col-primary: $col-black;
       repeat(2, minmax(92.5px, auto))
       repeat(2, minmax(92px, auto))
       repeat(2, minmax(92.5px, auto));
+
+    grid-template-areas:
+      ". . . . nav . title title"
+      "first first second second third third fourth fourth";
   }
 
   @include media(">=desktop") {
@@ -35,7 +51,6 @@ $col-primary: $col-black;
       repeat(2, minmax(116px, auto));
   }
 }
-
 // *** PAGE GRID END ***
 
 // *** SPACING ***

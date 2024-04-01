@@ -1,7 +1,7 @@
 .nav {
   display: flex;
   width: 100%;
-  grid-column: 1 / span 2;
+  grid-area: nav;
 
   @include media(">=tablet") {
     grid-column: 5 / span 2;
