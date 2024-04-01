@@ -13,7 +13,7 @@ $col-primary: $col-black;
 
 // *** PAGE GRID ***
 
-@mixin grid-home {
+@mixin grid-main {
   @include grid(repeat(4, 1fr), auto, 0, start);
 
   @include media(">=tablet") {
