@@ -3,14 +3,6 @@
   width: 100%;
   grid-area: nav;
 
-  @include media(">=tablet") {
-    grid-column: 5 / span 2;
-  }
-
-  @include media(">=desktop") {
-    grid-column: 9 / span 2;
-  }
-
   // TODO: Refactor button to separate class
   &__btn {
     @include font-responsive;

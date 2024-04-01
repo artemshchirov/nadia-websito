@@ -23,12 +23,10 @@
   padding-bottom: dynamic-size(100, 218, "mobile");
 
   @include media(">=tablet") {
-    grid-column: 7 / span 2;
     padding-bottom: dynamic-size(218, 228, "tablet");
   }
 
   @include media(">=desktop") {
-    grid-column: 13 / span 2;
     padding-bottom: dynamic-size(228, 301, "desktop");
   }
 
@@ -42,55 +40,39 @@
 
   &__hero {
     overflow-y: hidden;
-    grid-column: span 2;
 
     &:nth-child(3) {
-      grid-area: image-1;
+      grid-area: img-1;
       transform: translateY(-50%);
       display: none;
 
       @include media(">=tablet") {
         display: block;
       }
-
-      @include media(">=desktop") {
-        grid-column: 1 / span 2;
-      }
     }
 
     &:nth-child(4) {
-      grid-area: image-2;
-      grid-column: 1 / span 2;
-
-      @include media(">=tablet") {
-        grid-column: 3 / span 2;
-      }
+      grid-area: img-2;
     }
 
     &:nth-child(5) {
-      grid-area: image-3;
-      grid-column: 3 / span 2;
+      grid-area: img-3;
       margin-top: auto;
       transform: translateY(100%);
-
-      @include media(">=tablet") {
-        grid-column: 5 / span 2;
-      }
     }
 
     &:nth-child(6) {
-      grid-area: image-4;
+      grid-area: img-4;
       display: none;
       margin-top: auto;
 
       @include media(">=tablet") {
         display: block;
-        grid-column: 7 / span 2;
       }
     }
 
     &:nth-child(7) {
-      grid-area: image-5;
+      grid-area: img-5;
       transform: translateY(-50%);
       display: none;
 
@@ -100,7 +82,7 @@
     }
 
     &:nth-child(8) {
-      grid-area: image-6;
+      grid-area: img-6;
       display: none;
 
       @include media(">=desktop") {
@@ -112,7 +94,7 @@
     }
 
     &:nth-child(9) {
-      grid-area: image-7;
+      grid-area: img-7;
       display: none;
 
       @include media(">=desktop") {
@@ -123,7 +105,6 @@
 }
 
 .role {
-  // grid-column: 1;
   grid-area: role;
   padding-top: dynamic-size(213, 272, "mobile");
 
@@ -142,16 +123,13 @@
 
 .location {
   grid-area: location;
-  grid-column: 3 / span 2;
   padding-top: dynamic-size(213, 272, "mobile");
 
   @include media(">=tablet") {
-    grid-column: 5 / span 2;
     padding-top: dynamic-size(272, 306, "tablet");
   }
 
   @include media(">=desktop") {
-    grid-column: 7 / span 2;
     padding-top: dynamic-size(306, 403, "desktop");
   }
 
@@ -162,34 +140,22 @@
 
 .phone {
   grid-area: phone;
-  grid-column: 3 / span 2;
 
   @include media(">=tablet") {
-    grid-column: 7 / span 2;
     padding-top: dynamic-size(272, 306, "tablet");
+  }
 
-    @include media(">=desktop") {
-      grid-column: 13 / span 2;
-      padding-top: dynamic-size(306, 403, "desktop");
-    }
-    @include media(">=largeScreen") {
-      padding-top: 403px;
-    }
+  @include media(">=desktop") {
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
   }
 }
 
 .portrait {
-  // @include section-top-divider;
-  grid-area: image-8;
-  // grid-column: 3;
-
-  // @include media(">=tablet") {
-  //   grid-column: 5 / span 2;
-  // }
-
-  // @include media(">=desktop") {
-  //   grid-column: 7 / span 2;
-  // }
+  grid-area: img-8;
 }
 
 .image {
@@ -207,60 +173,35 @@
 }
 
 .name {
-  // @include section-top-divider;
   grid-area: name;
   font-weight: 300;
 
-  // grid-row: 6;
-  // grid-column: 2 / span 2;
   font-size: 25px;
   line-height: 1.2;
 
   @include media(">=tablet") {
-    // grid-column: 1 / span 4;
     font-size: 46px;
   }
 }
 
 .profile-image {
-  grid-area: image-9;
-  // grid-row: 7;
-  // grid-column: 1;
+  grid-area: img-9;
 
   @include media(">=tablet") {
-    // grid-column: 4 / span 1;
-    // grid-row: 10;
     max-width: 190px;
-  }
-
-  @include media(">=desktop") {
-    // grid-column: 6;
   }
 }
 
 .details {
+  @include flex($gap: dynamic-size(20, 15, "mobile"), $direction: column);
   grid-area: details;
-  // grid-row: 8;
-  // grid-column: 2 / span 3;
-  display: flex;
-  flex-direction: column;
-  gap: dynamic-size(20, 15, "mobile");
 
   @include media(">=tablet") {
-    // @include section-top-divider;
-    // grid-row: 6;
-    // grid-column: 5 / span 3;
     gap: dynamic-size(15, 30, "tablet");
   }
 
-  @include media(">=desktop") {
-    // grid-column: 9 / span 4;
-  }
-
   &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    @include flex($gap: 5px, $direction: column);
   }
 
   &__term {
@@ -271,34 +212,10 @@
 .bio {
   @include font-responsive;
   grid-area: bio;
-  // grid-row: 9;
-  // grid-column: 2 / span 3;
-  font-size: 14px;
-  line-height: 1.2;
   padding-top: 20px;
 
   @include media(">=tablet") {
-    // grid-row: 9;
-    // grid-column: 5 / span 4;
     padding-top: dynamic-size(20, 30, "tablet");
-  }
-
-  @include media(">=desktop") {
-    // grid-column: 9 / span 4;
-  }
-}
-
-.about {
-  // grid-column: 2 / span 3;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  gap: 20px;
-
-  @include media(">=tablet") {
-    // grid-row: 1;
-    // grid-column: 5 / span 4;
   }
 }
 
