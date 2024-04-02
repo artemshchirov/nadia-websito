@@ -184,12 +184,85 @@
   }
 }
 
-.profile-image {
+.image-9 {
   grid-area: img-9;
 
   @include media(">=tablet") {
     max-width: 190px;
   }
+}
+
+.image-10 {
+  grid-area: img-10;
+}
+
+.image-11 {
+  grid-area: img-11;
+
+  @include media(">=desktop") {
+    margin: auto;
+  }
+}
+
+.image-12 {
+  grid-area: img-12;
+}
+
+.image-13 {
+  grid-area: img-13;
+}
+
+.image-14 {
+  grid-area: img-14;
+}
+
+.image-15 {
+  grid-area: img-15;
+}
+
+.image-16 {
+  grid-area: img-16;
+  margin: auto;
+}
+
+.image-17 {
+  grid-area: img-17;
+}
+
+.image-18 {
+  grid-area: img-18;
+}
+
+.image-19 {
+  grid-area: img-19;
+}
+
+.image-20 {
+  grid-area: img-20;
+}
+
+.image-21 {
+  grid-area: img-21;
+}
+
+.image-22 {
+  grid-area: img-22;
+}
+
+.image-23 {
+  grid-area: img-23;
+}
+
+.image-24 {
+  grid-area: img-24;
+}
+
+.image-25 {
+  grid-area: img-25;
+}
+
+.image-26 {
+  grid-area: img-26;
 }
 
 .details {
@@ -219,6 +292,52 @@
   }
 }
 
+.link {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &-1 {
+    grid-area: link-1;
+    margin-left: auto;
+
+    @include media(">=tablet") {
+      margin-top: auto;
+    }
+  }
+}
+
+.area {
+  grid-area: area;
+  margin: auto;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  @include media(">=tablet") {
+    font-size: 46px;
+    text-align: end;
+  }
+
+  @include media(">=largeScreen") {
+    font-size: 62px;
+  }
+}
+
+.review {
+  grid-area: review;
+  margin: auto;
+}
+
+.pricing {
+  grid-area: pricing;
+  margin: auto;
+}
+
+.faq {
+  grid-area: faq;
+  margin: auto;
+}
+
 .divider {
   &-1 {
     @include section-top-divider;
@@ -232,28 +351,72 @@
     @include section-top-divider;
     grid-area: divider-3;
   }
-  // &-4 {
-  //   @include section-top-divider;
-  //   grid-area: divider-4;
-  // }
-  // &-5 {
-  //   @include section-top-divider;
-  //   grid-area: divider-5;
-  // }
-  // &-6 {
-  //   @include section-top-divider;
-  //   grid-area: divider-6;
-  // }
-  // &-7 {
-  //   @include section-top-divider;
-  //   grid-area: divider-7;
-  // }
-  // &-8 {
-  //   @include section-top-divider;
-  //   grid-area: divider-8;
-  // }
-  // &-9 {
-  //   @include section-top-divider;
-  //   grid-area: divider-9;
-  // }
+  &-4 {
+    @include section-top-divider;
+    grid-area: divider-4;
+  }
+  &-5 {
+    @include section-top-divider;
+    grid-area: divider-5;
+  }
+  &-6 {
+    @include section-top-divider;
+    grid-area: divider-6;
+  }
+  &-7 {
+    @include section-top-divider;
+    grid-area: divider-7;
+  }
+  &-8 {
+    @include section-top-divider;
+    grid-area: divider-8;
+  }
+  &-9 {
+    @include section-top-divider;
+    grid-area: divider-9;
+  }
+  &-10 {
+    @include section-top-divider;
+    grid-area: divider-10;
+  }
+  &-11 {
+    @include section-top-divider;
+    grid-area: divider-11;
+  }
+  &-12 {
+    @include section-top-divider;
+    grid-area: divider-12;
+  }
+  &-13 {
+    @include section-top-divider;
+    grid-area: divider-13;
+  }
+  &-14 {
+    @include section-top-divider;
+    grid-area: divider-14;
+  }
+  &-15 {
+    @include section-top-divider;
+    grid-area: divider-15;
+  }
+  &-16 {
+    @include section-top-divider;
+    grid-area: divider-16;
+  }
+  &-17 {
+    @include section-top-divider;
+    grid-area: divider-17;
+  }
+  &-18 {
+    @include section-top-divider;
+    grid-area: divider-18;
+  }
+  &-19 {
+    @include section-top-divider;
+    grid-area: divider-19;
+  }
+  &-20 {
+    @include section-top-divider;
+    grid-area: divider-20;
+  }
 }
