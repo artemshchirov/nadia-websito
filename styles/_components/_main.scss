@@ -302,12 +302,7 @@
 
   &-1 {
     grid-area: link-1;
-    margin: 0 auto;
-    transform: translateX(-80%);
-
-    @include media(">=tablet") {
-      margin-top: auto;
-    }
+    margin: auto 0 0 auto;
   }
 }
 
