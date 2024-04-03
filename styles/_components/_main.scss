@@ -689,7 +689,7 @@
   }
 }
 
-.tab__label h3 {
+.tab__label span {
   max-width: 277px;
 
   @include media(">=tablet") {
