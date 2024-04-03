@@ -257,6 +257,66 @@ import { heroImagesArray } from "@/constants/hero-images";
       <h2 class="review">Review</h2>
 
       <h2 class="faq">FAQ</h2>
+      <section class="accordion">
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb1" />
+          <label for="cb1" class="tab__label"><h3>How to choose outfits?</h3></label>
+          <div class="tab__content">
+            <p>
+              Choosing an outfit is a journey into your unique world of style. Together, we'll
+              explore your wardrobe, discover favorite outfits that make you happy and confident.
+              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
+              wish to capture the spring mood or urban elegance, I'll help select the outfit that
+              speaks for you. And let's not forget about accessories – they'll add a special touch
+              to your photos.
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb2" />
+          <label for="cb2" class="tab__label"
+            ><h3>How long does the photoshoot last and how many photos will I receive?</h3></label
+          >
+          <div class="tab__content">
+            <p>
+              Choosing an outfit is a journey into your unique world of style. Together, we'll
+              explore your wardrobe, discover favorite outfits that make you happy and confident.
+              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
+              wish to capture the spring mood or urban elegance, I'll help select the outfit that
+              speaks for you. And let's not forget about accessories – they'll add a special touch
+              to your photos.
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb3" />
+          <label for="cb3" class="tab__label"><h3>What locations are available?</h3></label>
+          <div class="tab__content">
+            <p>
+              Choosing an outfit is a journey into your unique world of style. Together, we'll
+              explore your wardrobe, discover favorite outfits that make you happy and confident.
+              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
+              wish to capture the spring mood or urban elegance, I'll help select the outfit that
+              speaks for you. And let's not forget about accessories – they'll add a special touch
+              to your photos.
+            </p>
+          </div>
+        </div>
+        <div class="tab">
+          <input type="checkbox" name="accordion-1" id="cb4" />
+          <label for="cb4" class="tab__label"><h3>How does the process work?</h3></label>
+          <div class="tab__content">
+            <p>
+              Choosing an outfit is a journey into your unique world of style. Together, we'll
+              explore your wardrobe, discover favorite outfits that make you happy and confident.
+              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
+              wish to capture the spring mood or urban elegance, I'll help select the outfit that
+              speaks for you. And let's not forget about accessories – they'll add a special touch
+              to your photos.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <div class="divider-1" />
       <div class="divider-2" />

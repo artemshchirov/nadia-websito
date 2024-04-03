@@ -510,11 +510,6 @@
   }
 }
 
-.faq {
-  grid-area: faq;
-  margin: auto;
-}
-
 .divider {
   &-1 {
     @include section-top-divider;
@@ -596,4 +591,138 @@
     @include section-top-divider;
     grid-area: divider-20;
   }
+}
+
+.faq {
+  grid-area: faq;
+  font-size: 25px;
+  font-weight: 300;
+  padding-bottom: dynamic-size(50, 60, "mobile");
+
+  @include media(">=tablet") {
+    font-size: 46px;
+    padding-bottom: 60px;
+  }
+
+  @include media(">=desktop") {
+    font-size: 62px;
+    letter-spacing: -0.62px;
+  }
+}
+
+// https://codepen.io/raubaca/pen/PZzpVe
+/* Core styles/functionality */
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+}
+
+/* Visual styles */
+.accordion {
+  grid-area: accordion;
+  width: 100%;
+  color: #000;
+  border-bottom: 0.5px solid #d3d3d3;
+  overflow: hidden;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  color: #000;
+  background: #fff;
+  border-top: 0.5px solid #d3d3d3;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+
+  @include media(">=tablet") {
+    font-size: 24px;
+    letter-spacing: -0.24px;
+  }
+
+  @include media(">=desktop") {
+    font-size: 32px;
+    letter-spacing: -0.32px;
+  }
+
+  @include media(">=largeScreen") {
+    font-size: 42px;
+    letter-spacing: -0.42px;
+  }
+}
+.tab__label {
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 20px;
+
+  @include media(">=tablet") {
+    padding-top: 30px;
+  }
+
+  @include media(">=desktop") {
+    padding-top: 35px;
+    padding-bottom: 20px;
+  }
+
+  @include media(">=largeScreen") {
+    padding-bottom: 30px;
+    padding-right: 30px;
+  }
+}
+
+.tab__label h3 {
+  max-width: 277px;
+
+  @include media(">=tablet") {
+    max-width: 561px;
+  }
+
+  @include media(">=desktop") {
+    max-width: max-content;
+  }
+}
+
+.tab__content p {
+  padding-bottom: 25px;
+
+  @include media(">=tablet") {
+    max-width: 561px;
+    padding-bottom: 30px;
+  }
+
+  @include media(">=desktop") {
+    max-width: 631px;
+    padding-bottom: 35px;
+  }
+
+  @include media(">=largeScreen") {
+    max-width: 836px;
+  }
+}
+
+.tab__label::after {
+  content: "+";
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  content: "−";
+}
+
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
 }

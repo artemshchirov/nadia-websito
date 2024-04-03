@@ -49,7 +49,8 @@
     "divider-18 . . ."
     ". . img-26 ."
     "divider-19 . . ."
-    "faq faq faq faq";
+    ". . faq ."
+    "accordion accordion accordion accordion";
 
   @include media(">=tablet") {
     grid-template-columns:
@@ -101,7 +102,8 @@
       "divider-15 . . . . . . ."
       ". . . . img-26 img-26 . ."
       "divider-16 . . . . . . ."
-      "faq faq faq faq faq faq faq faq";
+      ". . . . faq . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion";
   }
 
   @include media(">=desktop") {
@@ -154,6 +156,7 @@
       "divider-15 . . . . . . . . . . . . ."
       ". . . . . . . . . . . . img-26 img-26"
       "divider-16 . . . . . . . . . . . . ."
-      "faq faq faq faq faq faq faq faq faq faq faq faq faq faq";
+      ". . . . . . . . faq . . . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion";
   }
 }
