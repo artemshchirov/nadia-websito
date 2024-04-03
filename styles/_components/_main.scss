@@ -231,6 +231,10 @@
 
 .image-18 {
   grid-area: img-18;
+
+  @include media(">=desktop") {
+    margin: auto;
+  }
 }
 
 .image-19 {
@@ -298,7 +302,8 @@
 
   &-1 {
     grid-area: link-1;
-    margin-left: auto;
+    margin: 0 auto;
+    transform: translateX(-80%);
 
     @include media(">=tablet") {
       margin-top: auto;
@@ -330,7 +335,184 @@
 
 .pricing {
   grid-area: pricing;
-  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    // gap: 4px;
+  }
+
+  &__row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+
+    @include media(">=tablet") {
+      gap: 0;
+      margin-top: -7px;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+
+    @include media(">=tablet") {
+      font-size: 24px;
+      letter-spacing: -0.24px;
+    }
+
+    @include media(">=desktop") {
+      font-size: 32px;
+      letter-spacing: -0.32px;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: 42px;
+      letter-spacing: -0.42px;
+    }
+  }
+
+  &__description {
+    color: #8d8d8d;
+    white-space: nowrap;
+    font-weight: 400;
+
+    &_mr {
+      &_sm {
+        @include media(">=tablet") {
+          margin-right: 19px;
+        }
+
+        @include media(">=desktop") {
+          margin-right: 46px;
+        }
+
+        @include media(">=largeScreen") {
+          margin-right: 20px;
+        }
+      }
+
+      &_md {
+        @include media(">=tablet") {
+          margin-right: 29px;
+        }
+
+        @include media(">=desktop") {
+          margin-right: 84px;
+        }
+
+        @include media(">=largeScreen") {
+          margin-right: 40px;
+        }
+      }
+
+      &_lg {
+        @include media(">=tablet") {
+          margin-right: 37px;
+        }
+
+        @include media(">=desktop") {
+          margin-right: 62px;
+        }
+
+        @include media(">=largeScreen") {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+
+  &__underline {
+    background-color: #8d8d8d;
+    height: 1px;
+    width: 100%;
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+    gap: dynamic-size(4, 5, "mobile");
+
+    @include media(">=tablet") {
+      gap: 5px;
+    }
+
+    &_ml {
+      &_sm {
+        @include media(">=tablet") {
+          margin-left: 13px;
+        }
+
+        @include media(">=desktop") {
+          margin-left: 19px;
+        }
+      }
+
+      &_md {
+        @include media(">=tablet") {
+          margin-left: 17px;
+        }
+
+        @include media(">=desktop") {
+          margin-left: 25px;
+        }
+      }
+
+      &_lg {
+        @include media(">=tablet") {
+          margin-left: 25px;
+        }
+
+        @include media(">=desktop") {
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+
+  &__cost {
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: -0.2px;
+
+    @include media(">=tablet") {
+      font-size: 24px;
+      letter-spacing: -0.24px;
+    }
+
+    @include media(">=desktop") {
+      font-size: 32px;
+      letter-spacing: -0.32px;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: 42px;
+      letter-spacing: -0.42px;
+    }
+  }
+}
+
+.oneline {
+  display: none;
+
+  @include media(">=tablet") {
+    display: inline-block;
+  }
+}
+
+.multiline {
+  margin-top: 4px;
+  margin-bottom: -4px;
+
+  @include media(">=tablet") {
+    display: none;
+  }
 }
 
 .faq {

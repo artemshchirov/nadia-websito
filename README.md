@@ -9,20 +9,22 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 
 ## TODO
 
-- [ ] Grid Setup
-- [ ] Confirm buttons and links transitions
-- [ ] Header
-- [ ] Hero
-- [ ] About
-- [ ] Images 1
+- [x] Grid Setup
+- [x] Header
+- [x] Hero
+- [x] About
+- [x] Images 1
 - [ ] Pricing
-- [ ] Images 2
+- [x] Images 2
 - [ ] Reviews
-- [ ] Images 3
+- [x] Images 3
 - [ ] FAQ
 - [ ] Footer
 - [ ] Nav menu
-- [ ] All responsive
+- [ ] Buttons and links transitions
+- [ ] Get minimal image sizes from ImageKit
+- [ ] PageSpeed Insights / Lighthouse optimizations
+- [ ]
 
 ## Setup
 
