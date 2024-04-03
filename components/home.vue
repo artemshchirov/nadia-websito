@@ -260,7 +260,7 @@ import { heroImagesArray } from "@/constants/hero-images";
       <section class="accordion">
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb1" />
-          <label for="cb1" class="tab__label"><h3>How to choose outfits?</h3></label>
+          <label for="cb1" class="tab__label"><span>How to choose outfits?</span></label>
           <div class="tab__content">
             <p>
               Choosing an outfit is a journey into your unique world of style. Together, we'll
@@ -275,7 +275,9 @@ import { heroImagesArray } from "@/constants/hero-images";
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb2" />
           <label for="cb2" class="tab__label"
-            ><h3>How long does the photoshoot last and how many photos will I receive?</h3></label
+            ><span
+              >How long does the photoshoot last and how many photos will I receive?</span
+            ></label
           >
           <div class="tab__content">
             <p>
@@ -290,7 +292,7 @@ import { heroImagesArray } from "@/constants/hero-images";
         </div>
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb3" />
-          <label for="cb3" class="tab__label"><h3>What locations are available?</h3></label>
+          <label for="cb3" class="tab__label"><span>What locations are available?</span></label>
           <div class="tab__content">
             <p>
               Choosing an outfit is a journey into your unique world of style. Together, we'll
@@ -304,7 +306,7 @@ import { heroImagesArray } from "@/constants/hero-images";
         </div>
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb4" />
-          <label for="cb4" class="tab__label"><h3>How does the process work?</h3></label>
+          <label for="cb4" class="tab__label"><span>How does the process work?</span></label>
           <div class="tab__content">
             <p>
               Choosing an outfit is a journey into your unique world of style. Together, we'll

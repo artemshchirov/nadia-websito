@@ -620,30 +620,43 @@
 .tab__content {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.35s;
+  transition: all 0.4s;
 }
 .tab input:checked ~ .tab__content {
   max-height: 10rem;
+  transition: all 0.4s;
+}
+
+.tab input:checked ~ .tab__content p {
+  color: #000;
+  transition: all 0.4s;
+  user-select: auto;
+}
+
+.tab input:checked ~ .tab__label {
+  transition: all 0.4s;
+  padding-bottom: 20px;
+
+  @include media(">=largeScreen") {
+    padding-bottom: 30px;
+  }
 }
 
 /* Visual styles */
 .accordion {
   grid-area: accordion;
   width: 100%;
-  color: #000;
   border-bottom: 0.5px solid #d3d3d3;
-  overflow: hidden;
 }
 .tab__label,
 .tab__close {
   display: flex;
-  color: #000;
-  background: #fff;
   border-top: 0.5px solid #d3d3d3;
   cursor: pointer;
   font-size: 20px;
   font-weight: 300;
   letter-spacing: -0.2px;
+  user-select: none;
 
   @include media(">=tablet") {
     font-size: 24px;
@@ -663,20 +676,16 @@
 .tab__label {
   justify-content: space-between;
   padding-top: 25px;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 
   @include media(">=tablet") {
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   @include media(">=desktop") {
     padding-top: 35px;
-    padding-bottom: 20px;
-  }
-
-  @include media(">=largeScreen") {
-    padding-bottom: 30px;
-    padding-right: 30px;
+    padding-bottom: 35px;
   }
 }
 
@@ -693,6 +702,8 @@
 }
 
 .tab__content p {
+  color: transparent;
+  user-select: none;
   padding-bottom: 25px;
 
   @include media(">=tablet") {
@@ -703,10 +714,6 @@
   @include media(">=desktop") {
     max-width: 631px;
     padding-bottom: 35px;
-  }
-
-  @include media(">=largeScreen") {
-    max-width: 836px;
   }
 }
 
