@@ -41,7 +41,7 @@
     "divider-15 . . ."
     ". . img-22 img-22"
     "divider-16 . . ."
-    "review review review review"
+    "reviews reviews reviews reviews"
     "divider-17 . . ."
     "img-23 . . ."
     ". . . img-24"
@@ -50,7 +50,8 @@
     ". . img-26 ."
     "divider-19 . . ."
     ". . faq ."
-    "accordion accordion accordion accordion";
+    "accordion accordion accordion accordion"
+    "footer footer footer footer";
 
   @include media(">=tablet") {
     grid-template-columns:
@@ -94,7 +95,7 @@
       "divider-12 . . . . . . ."
       ". . img-22 img-22 . . . ."
       "divider-13 . . . . . . ."
-      "review review review review review review review review"
+      "reviews reviews reviews reviews reviews reviews reviews reviews"
       "divider-14 . . . . . . ."
       ". img-23 . . . . . ."
       ". . . . . . img-24 img-24"
@@ -103,7 +104,8 @@
       ". . . . img-26 img-26 . ."
       "divider-16 . . . . . . ."
       ". . . . faq . . ."
-      "accordion accordion accordion accordion accordion accordion accordion accordion";
+      "accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer";
   }
 
   @include media(">=desktop") {
@@ -147,7 +149,7 @@
       "divider-11 . . . . . . . . . . . . ."
       ". . . . . . img-22 img-22 . . . . . ."
       "divider-12 . . . . . . . . . . . . ."
-      "review review review review review review review review review review review review . ."
+      "reviews reviews reviews reviews reviews reviews reviews reviews reviews reviews reviews reviews . ."
       "divider-13 . . . . . . . . . . . . ."
       ". . . . . . . . . . . . .  img-23"
       "divider-14 . . . . . . . . . . . . ."
@@ -157,6 +159,7 @@
       ". . . . . . . . . . . . img-26 img-26"
       "divider-16 . . . . . . . . . . . . ."
       ". . . . . . . . faq . . . . ."
-      "accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion";
+      "accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }

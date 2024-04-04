@@ -3,8 +3,8 @@ import { heroImagesArray } from "@/constants/hero-images";
 </script>
 
 <template>
-  <section class="page section">
-    <div class="main">
+  <section class="page">
+    <div class="main section">
       <!-- HEADER MENU -->
       <nav class="nav">
         <button class="nav__btn">Menu</button>
@@ -254,21 +254,22 @@ import { heroImagesArray } from "@/constants/hero-images";
       </ul>
 
       <h2 class="area">Portrait / Love&Family / Food / Animals / Outdoor</h2>
-      <h2 class="review">Review</h2>
+      <h2 class="reviews" id="reviews">Review</h2>
 
-      <h2 class="faq">FAQ</h2>
+      <h2 class="faq" id="faq">FAQ</h2>
       <section class="accordion">
         <div class="tab">
           <input type="checkbox" name="accordion-1" id="cb1" />
           <label for="cb1" class="tab__label"><span>How to choose outfits?</span></label>
           <div class="tab__content">
             <p>
-              Choosing an outfit is a journey into your unique world of style. Together, we'll
-              explore your wardrobe, discover favorite outfits that make you happy and confident.
-              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
-              wish to capture the spring mood or urban elegance, I'll help select the outfit that
-              speaks for you. And let's not forget about accessories – they'll add a special touch
-              to your photos.
+              Choosing an&nbsp;outfit is&nbsp;a&nbsp;journey into your unique world of&nbsp;style.
+              Together, we&rsquo;ll explore your wardrobe, discover favorite outfits that make you
+              happy and confident. Inspired by&nbsp;this, we&rsquo;ll define the perfect concept for
+              your photoshoot. Whether you wish to&nbsp;capture the spring mood or&nbsp;urban
+              elegance, I&rsquo;ll help select the outfit that speaks for you. And let&rsquo;s not
+              forget about accessories&nbsp;&mdash; they&rsquo;ll add a&nbsp;special touch
+              to&nbsp;your photos.
             </p>
           </div>
         </div>
@@ -281,12 +282,12 @@ import { heroImagesArray } from "@/constants/hero-images";
           >
           <div class="tab__content">
             <p>
-              Choosing an outfit is a journey into your unique world of style. Together, we'll
-              explore your wardrobe, discover favorite outfits that make you happy and confident.
-              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
-              wish to capture the spring mood or urban elegance, I'll help select the outfit that
-              speaks for you. And let's not forget about accessories – they'll add a special touch
-              to your photos.
+              Each photoshoot with you is&nbsp;a&nbsp;unique creative adventure. The duration and
+              the number of&nbsp;photos depend on&nbsp;various factors, including the choice
+              of&nbsp;location and the mood we want to&nbsp;convey. My&nbsp;goal is&nbsp;not just
+              to&nbsp;take pictures, but to&nbsp;capture the true beauty of&nbsp;the moment.
+              You&rsquo;ll receive a&nbsp;collection of&nbsp;the best photos that will become your
+              cherished memories.
             </p>
           </div>
         </div>
@@ -295,12 +296,12 @@ import { heroImagesArray } from "@/constants/hero-images";
           <label for="cb3" class="tab__label"><span>What locations are available?</span></label>
           <div class="tab__content">
             <p>
-              Choosing an outfit is a journey into your unique world of style. Together, we'll
-              explore your wardrobe, discover favorite outfits that make you happy and confident.
-              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
-              wish to capture the spring mood or urban elegance, I'll help select the outfit that
-              speaks for you. And let's not forget about accessories – they'll add a special touch
-              to your photos.
+              From secluded beaches to&nbsp;picturesque streets, from cozy cafes to&nbsp;mysterious
+              abandoned buildings&nbsp;&mdash; our choice of&nbsp;location is&nbsp;only limited
+              by&nbsp;our imagination. We&rsquo;ll find the place that best highlights your
+              individuality and the spirit of&nbsp;the photoshoot. If&nbsp;you dream
+              of&nbsp;a&nbsp;shoot in&nbsp;a&nbsp;special place, I&rsquo;m always open to&nbsp;new
+              ideas and ready to&nbsp;bring them to&nbsp;life.
             </p>
           </div>
         </div>
@@ -309,12 +310,15 @@ import { heroImagesArray } from "@/constants/hero-images";
           <label for="cb4" class="tab__label"><span>How does the process work?</span></label>
           <div class="tab__content">
             <p>
-              Choosing an outfit is a journey into your unique world of style. Together, we'll
-              explore your wardrobe, discover favorite outfits that make you happy and confident.
-              Inspired by this, we'll define the perfect concept for your photoshoot. Whether you
-              wish to capture the spring mood or urban elegance, I'll help select the outfit that
-              speaks for you. And let's not forget about accessories – they'll add a special touch
-              to your photos.
+              From our first meeting to&nbsp;the moment you hold the finished photos in&nbsp;your
+              hands, every step of&nbsp;our journey together is&nbsp;filled with creativity and
+              attention to&nbsp;detail. We&rsquo;ll start by&nbsp;discussing your ideas and
+              preferences, then select the location and outfits, and prepare everything needed for
+              the shoot. For complete comfort, we&rsquo;ll meet over a cup of&nbsp;coffee before
+              starting, so&nbsp;you can relax and get in&nbsp;the right mindset. The shoot will take
+              place in&nbsp;a&nbsp;light and friendly atmosphere, where every frame is&nbsp;filled
+              with emotions and beauty. And, of&nbsp;course, I&rsquo;ll take care of&nbsp;selecting
+              and editing the best moments for you.
             </p>
           </div>
         </div>
@@ -336,10 +340,39 @@ import { heroImagesArray } from "@/constants/hero-images";
       <div class="divider-14" />
       <div class="divider-15" />
       <div class="divider-16" />
+    </div>
+    <footer class="footer">
+      <p class="footer__year">.2024</p>
+      <h2 class="footer__title">Contacts</h2>
+      <ul class="footer__links">
+        <li><NuxtLink href="#about">About</NuxtLink></li>
+        <li><NuxtLink href="#services">Services</NuxtLink></li>
+        <li><NuxtLink href="#portfolio">Portfolio</NuxtLink></li>
+        <li><NuxtLink href="#contacts">Contacts</NuxtLink></li>
+        <li><NuxtLink to="#faq">FAQ</NuxtLink></li>
+      </ul>
+
+      <p class="footer__location">Israel, Haifa</p>
+      <ul class="footer__socials">
+        <li><NuxtLink href="https://t.me/NadyaBeson">Instagram</NuxtLink></li>
+        <li><NuxtLink href="https://www.instagram.com/nadyabeson">Telegram</NuxtLink></li>
+        <li>
+          <NuxtLink href="https://api.whatsapp.com/send?phone=972549029191">WhatsApp</NuxtLink>
+        </li>
+      </ul>
+      <div class="footer__contact">
+        <p>+972549029191</p>
+        <NuxtLink href="mailto:nadyabeson@gmail.com">nadyabeson@gmail.com</NuxtLink>
+      </div>
+      <p class="footer__copyright">Ⓒ All Rights Reserved</p>
+      <p class="footer__authors">
+        Created&nbsp;by&nbsp;Butcher/<br
+          class="footer__authors_multiline"
+        />Developed&nbsp;by&nbsp;Ɐrtem
+      </p>
       <div class="divider-17" />
       <div class="divider-18" />
       <div class="divider-19" />
-      <div class="divider-20" />
-    </div>
+    </footer>
   </section>
 </template>

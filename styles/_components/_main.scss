@@ -323,8 +323,8 @@
   }
 }
 
-.review {
-  grid-area: review;
+.reviews {
+  grid-area: reviews;
   margin: auto;
 }
 
@@ -578,18 +578,29 @@
   &-17 {
     @include section-top-divider;
     grid-area: divider-17;
+    display: none;
+
+    @include media(">=desktop") {
+      display: block;
+    }
   }
   &-18 {
     @include section-top-divider;
     grid-area: divider-18;
+    display: none;
+
+    @include media(">=desktop") {
+      display: block;
+    }
   }
   &-19 {
     @include section-top-divider;
     grid-area: divider-19;
-  }
-  &-20 {
-    @include section-top-divider;
-    grid-area: divider-20;
+    display: none;
+
+    @include media(">=desktop") {
+      display: block;
+    }
   }
 }
 
@@ -732,4 +743,163 @@
   justify-content: flex-end;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
+}
+
+.footer {
+  @include grid-main;
+
+  grid-template-areas:
+    "year . links ."
+    "footer__title footer__title contact contact"
+    ". . socials ."
+    ". . footer__location ."
+    "copyright copyright authors authors";
+
+  @include media(">=tablet") {
+    grid-template-areas:
+      "year . . . socials . footer__location ."
+      ". . footer__title footer__title . . . ."
+      ". . . . links . contact contact"
+      "copyright copyright . . authors authors authors .";
+  }
+
+  @include media(">=desktop") {
+    grid-template-areas:
+      "divider-17 . . . . . . . . . . . . ."
+      "footer__location . footer__title footer__title footer__title . . . links . socials . contact ."
+      "divider-18 . . . . . . . . . . . . ."
+      "copyright copyright . . . . . . year . authors authors authors ."
+      "divider-19 . . . . . . . . . . . . .";
+  }
+
+  margin-top: 25px;
+  grid-area: footer;
+  background: #000;
+  color: #8d8d8d;
+  padding: 20px 10px;
+  width: 100%;
+
+  @include media(">=tablet") {
+    margin-top: 30px;
+    padding: 50px 10px;
+  }
+
+  @include media(">=desktop") {
+    margin-top: 35px;
+    padding: 0 10px;
+  }
+
+  &__title {
+    grid-area: footer__title;
+    padding-top: 50px;
+    margin: auto 0;
+    font-size: 25px;
+    font-weight: 300;
+    color: #fff;
+
+    @include media(">=tablet") {
+      font-size: 46px;
+    }
+
+    @include media(">=desktop") {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__year {
+    grid-area: year;
+  }
+
+  &__location {
+    grid-area: footer__location;
+    padding-top: 50px;
+
+    @include media(">=tablet") {
+      padding-top: 0;
+    }
+  }
+
+  &__authors {
+    grid-area: authors;
+    padding-top: 50px;
+
+    @include media(">=desktop") {
+      padding-top: 0;
+    }
+
+    &_multiline {
+      @include media(">=tablet") {
+        display: none;
+      }
+    }
+  }
+
+  &__copyright {
+    grid-area: copyright;
+    padding-top: 50px;
+
+    @include media(">=desktop") {
+      padding-top: 0;
+    }
+  }
+
+  &__links {
+    grid-area: links;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include media(">=tablet") {
+      padding-top: 50px;
+    }
+
+    @include media(">=desktop") {
+      padding-top: 0;
+      gap: 8px;
+    }
+
+    @include media(">=largeScreen") {
+      gap: 10px;
+    }
+  }
+
+  &__contact {
+    grid-area: contact;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include media(">=tablet") {
+      margin-top: auto;
+      padding-top: 0;
+    }
+
+    @include media(">=desktop") {
+      margin-top: 0;
+      gap: 8px;
+    }
+
+    @include media(">=largeScreen") {
+      gap: 10px;
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    @include media(">=tablet") {
+      padding-top: 0;
+      gap: 8px;
+    }
+
+    @include media(">=largeScreen") {
+      gap: 10px;
+    }
+  }
 }
