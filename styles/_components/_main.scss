@@ -297,9 +297,6 @@
 }
 
 .link {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-
   &-1 {
     grid-area: link-1;
     margin: auto 0 0 auto;
@@ -308,10 +305,10 @@
 
 .area {
   grid-area: area;
-  margin: auto;
+  margin: auto auto auto 0;
   font-size: 25px;
   font-weight: 300;
-  line-height: 1.2;
+  max-width: 330px;
 
   @include media(">=tablet") {
     font-size: 46px;
@@ -321,11 +318,6 @@
   @include media(">=largeScreen") {
     font-size: 62px;
   }
-}
-
-.reviews {
-  grid-area: reviews;
-  margin: auto;
 }
 
 .pricing {
@@ -578,27 +570,39 @@
   &-17 {
     @include section-top-divider;
     grid-area: divider-17;
-    display: none;
-
-    @include media(">=desktop") {
-      display: block;
-    }
   }
   &-18 {
     @include section-top-divider;
     grid-area: divider-18;
-    display: none;
-
-    @include media(">=desktop") {
-      display: block;
-    }
   }
   &-19 {
     @include section-top-divider;
     grid-area: divider-19;
+  }
+  &-20 {
+    @include section-top-divider;
+    grid-area: divider-20;
     display: none;
 
-    @include media(">=desktop") {
+    @include media(">=tablet") {
+      display: block;
+    }
+  }
+  &-21 {
+    @include section-top-divider;
+    grid-area: divider-21;
+    display: none;
+
+    @include media(">=tablet") {
+      display: block;
+    }
+  }
+  &-22 {
+    @include section-top-divider;
+    grid-area: divider-22;
+    display: none;
+
+    @include media(">=tablet") {
       display: block;
     }
   }
@@ -765,11 +769,11 @@
 
   @include media(">=desktop") {
     grid-template-areas:
-      "divider-17 . . . . . . . . . . . . ."
+      "divider-20 . . . . . . . . . . . . ."
       "footer__location . footer__title footer__title footer__title . . . links . socials . contact ."
-      "divider-18 . . . . . . . . . . . . ."
+      "divider-21 . . . . . . . . . . . . ."
       "copyright copyright . . . . . . year . authors authors authors ."
-      "divider-19 . . . . . . . . . . . . .";
+      "divider-22 . . . . . . . . . . . . .";
   }
 
   margin-top: 25px;
@@ -902,4 +906,86 @@
       gap: 10px;
     }
   }
+}
+
+.slider-controls {
+  grid-area: slider-controls;
+  display: flex;
+  align-items: baseline;
+
+  button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  @include media(">=tablet") {
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+  @include media(">=desktop") {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.slider-info {
+  grid-area: slider-info;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(">=desktop") {
+    gap: 30px;
+    margin-top: auto;
+  }
+}
+
+.slider-counter {
+  white-space: nowrap;
+}
+
+.slider-image {
+  grid-area: slider-img;
+  width: 100%;
+}
+
+.slider-name {
+  grid-area: slider-name;
+  font-size: 25px;
+  font-weight: 300;
+
+  @include media(">=tablet") {
+    font-size: 46px;
+  }
+}
+
+.slider-signature {
+  color: #8d8d8d;
+  text-align: start;
+}
+
+.slider-details {
+  text-align: start;
+}
+
+.slider-prev {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.slider-next {
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0.1;
 }

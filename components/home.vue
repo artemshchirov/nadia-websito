@@ -37,7 +37,7 @@ import { heroImagesArray } from "@/constants/hero-images";
       <!-- DIVIDER -->
       <NuxtImg
         class="image portrait"
-        src="https://ik.imagekit.io/webbuilder/nadia-websito/about/about-1_DnGSsOSxx.webp?updatedAt=1711886498930"
+        src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(4)_eVXkwhd-g6.webp?updatedAt=1711983590231"
         alt="Nadia"
       />
       <!-- DIVIDER END -->
@@ -47,7 +47,7 @@ import { heroImagesArray } from "@/constants/hero-images";
 
       <NuxtImg
         class="image image-9"
-        src="https://ik.imagekit.io/webbuilder/nadia-websito/about/about-2_a6fMxHecQ.webp?updatedAt=1711886499127"
+        src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(5)_XvjoCwd6g.webp?updatedAt=1711983590048"
         alt="Nadya Besson posing with a yellow background"
       />
 
@@ -175,7 +175,26 @@ import { heroImagesArray } from "@/constants/hero-images";
         alt="Nadia"
       />
 
-      <div class="link link-1"><NuxtLink to="/portfolio">See all</NuxtLink> -></div>
+      <div class="link link-1">
+        <NuxtLink style="display: flex; align-items: center; gap: 4px" to="/portfolio"
+          >See all
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="17"
+            viewBox="0 0 16 17"
+            fill="none"
+          >
+            <path
+              d="M2 8.5H14M14 8.5L8 2.5M14 8.5L8 14.5"
+              stroke="black"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </NuxtLink>
+        <div style="height: 1px; width: 100%; background-color: #000; margin-top: 3px" />
+      </div>
 
       <!-- TODO: Dynamic margins and spacing -->
       <ul class="pricing">
@@ -254,7 +273,8 @@ import { heroImagesArray } from "@/constants/hero-images";
       </ul>
 
       <h2 class="area">Portrait / Love&Family / Food / Animals / Outdoor</h2>
-      <h2 class="reviews" id="reviews">Review</h2>
+
+      <Reviews />
 
       <h2 class="faq" id="faq">FAQ</h2>
       <section class="accordion">
@@ -340,7 +360,11 @@ import { heroImagesArray } from "@/constants/hero-images";
       <div class="divider-14" />
       <div class="divider-15" />
       <div class="divider-16" />
+      <div class="divider-17" />
+      <div class="divider-18" />
+      <div class="divider-19" />
     </div>
+
     <footer class="footer">
       <p class="footer__year">.2024</p>
       <h2 class="footer__title">Contacts</h2>
@@ -370,9 +394,9 @@ import { heroImagesArray } from "@/constants/hero-images";
           class="footer__authors_multiline"
         />Developed&nbsp;by&nbsp;Ɐrtem
       </p>
-      <div class="divider-17" />
-      <div class="divider-18" />
-      <div class="divider-19" />
+      <div class="divider-20" />
+      <div class="divider-21" />
+      <div class="divider-22" />
     </footer>
   </section>
 </template>

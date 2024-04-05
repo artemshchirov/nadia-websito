@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: `https://ik.imagekit.io/webbuilder/nadia-websito/about/about-1_DnGSsOSxx.webp?updatedAt=1711886499124`,
+          content: `https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(4)_eVXkwhd-g6.webp?updatedAt=1711983590231`,
         },
         {
           hid: "keywords",
