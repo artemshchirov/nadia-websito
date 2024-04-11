@@ -1,7 +1,202 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+}
+
 .nav {
-  display: flex;
   width: 100%;
   grid-area: nav;
+  z-index: 1000;
+
+  &__menu {
+    @include grid(repeat(4, 1fr), auto, 0, start);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1000;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+    grid-template-areas: "nav-content nav-content nav-content nav-content";
+
+    @include media(">=tablet") {
+      // padding-left: 10px;
+
+      grid-template-columns:
+        repeat(2, minmax(94.5px, auto))
+        repeat(2, minmax(92.5px, auto))
+        repeat(2, minmax(92px, auto))
+        repeat(2, minmax(92.5px, auto));
+
+      grid-template-areas: ". . nav-content nav-content nav-content nav-content nav-content nav-content";
+    }
+
+    @include media(">=desktop") {
+      padding-left: 10px;
+      grid-template-columns:
+        repeat(2, minmax(117px, auto))
+        repeat(2, minmax(81px, auto))
+        repeat(2, minmax(117px, auto))
+        repeat(2, minmax(81px, auto))
+        repeat(2, minmax(117px, auto))
+        repeat(2, minmax(81px, auto))
+        repeat(2, minmax(116px, auto));
+
+      grid-template-areas: ". . . . . . nav-content nav-content nav-content nav-content nav-content nav-content nav-content nav-content";
+    }
+
+    &.menu-open {
+      visibility: visible;
+      opacity: 1;
+      transition-delay: 0s;
+    }
+  }
+
+  &__content {
+    @include grid(repeat(4, 1fr), auto, 0, start);
+    grid-area: nav-content;
+    background-color: #fff;
+    height: 100%;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+    z-index: 1200;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.3s ease, opacity 0.3s ease, visibility 0s linear 0.3s;
+
+    grid-template-areas:
+      "nav-close . nav-title nav-title"
+      ". . nav-links nav-links"
+      ". nav-text . ."
+      ". . nav-socials ."
+      ". . nav-contact nav-contact"
+      "nav-copyright nav-copyright nav-year ."
+      ". . nav-authors nav-authors";
+
+    &.menu-open {
+      visibility: visible;
+      transform: translateX(0);
+      transition-delay: 0s;
+    }
+
+    @include media(">=tablet") {
+      grid-template-columns:
+        repeat(2, minmax(92.5px, auto))
+        repeat(2, minmax(92px, auto))
+        repeat(2, minmax(92.5px, auto));
+
+      grid-template-areas:
+        ". . nav-close . nav-title nav-title"
+        ". nav-year nav-text . . ."
+        ". . nav-links . . ."
+        ". . nav-socials . . ."
+        ". .  nav-contact nav-contact . ."
+        ". nav-authors nav-authors nav-authors nav-copyright nav-copyright";
+    }
+
+    @include media(">=desktop") {
+      grid-template-columns:
+        repeat(2, minmax(81px, auto))
+        repeat(2, minmax(117px, auto))
+        repeat(2, minmax(81px, auto))
+        repeat(2, minmax(116px, auto));
+
+      grid-template-areas:
+        ". . nav-close . . . nav-title ."
+        ". . nav-text . . . . ."
+        ". . nav-links . . . . ."
+        ". . nav-socials . . . . ."
+        ". . nav-contact nav-contact . . . ."
+        ". . nav-copyright nav-copyright nav-year . nav-authors nav-authors";
+    }
+  }
+
+  &__contact {
+    grid-area: nav-contact;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #aeaeae;
+  }
+
+  &__copyright {
+    grid-area: nav-copyright;
+    color: #aeaeae;
+  }
+
+  &__year {
+    grid-area: nav-year;
+    color: #aeaeae;
+  }
+
+  &__authors {
+    grid-area: nav-authors;
+    color: #aeaeae;
+
+    @include media(">=desktop") {
+      // margin-left: auto;
+    }
+
+    &_multiline {
+      @include media(">=tablet") {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    grid-area: nav-links;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    grid-area: nav-title;
+  }
+
+  &__text {
+    grid-area: nav-text;
+  }
+
+  &__socials {
+    grid-area: nav-socials;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #aeaeae;
+  }
+
+  &__social {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  &__close {
+    grid-area: nav-close;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 
   // TODO: Refactor button to separate class
   &__btn {

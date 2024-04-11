@@ -22,7 +22,7 @@ export const heroImagesArray = [
   },
   {
     id: 5,
-    src: "https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(16)_Qmu3O2nLU.webp?updatedAt=1711983591878",
+    src: "https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(13)_lRZ3jnaeb.webp?updatedAt=1711983591843",
     alt: "Scenic view of a mountain partially obscured by clouds reflecting on a lake.",
   },
   {
