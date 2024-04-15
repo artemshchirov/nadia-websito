@@ -1,123 +1,11 @@
 <script setup lang="ts">
 import { heroImagesArray } from "@/constants/hero-images";
-import { ref, watch } from "vue";
-
-// TODO: Move NavMenu to a separate file
-const isMenuOpen = ref(false);
-
-function toggleMenu() {
-  isMenuOpen.value = !isMenuOpen.value;
-}
-
-const disableScroll = () => {
-  document.body.style.overflow = "hidden";
-};
-
-const enableScroll = () => {
-  document.body.style.overflow = "";
-};
-
-watch(isMenuOpen, (newVal) => {
-  if (newVal) {
-    disableScroll();
-  } else {
-    enableScroll();
-  }
-});
 </script>
 
 <template>
   <section class="page">
     <div class="main section">
-      <!-- HEADER MENU -->
-      <nav class="nav">
-        <button class="nav__btn" @click="toggleMenu">Menu</button>
-
-        <div class="nav__menu" :class="{ 'menu-open': isMenuOpen }">
-          <div class="overlay" v-if="isMenuOpen" @click="toggleMenu" />
-          <div class="nav__content" :class="{ 'menu-open': isMenuOpen }">
-            <button class="nav__close" @click="toggleMenu">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="22"
-                height="22"
-                viewBox="0 0 22 22"
-                fill="none"
-              >
-                <path d="M1 1L21 21" stroke="black" stroke-width="0.833333" />
-                <path d="M1 21L21 1" stroke="black" stroke-width="0.833333" />
-              </svg>
-            </button>
-
-            <p class="nav__title">
-              Your story, <br />
-              immortalized in art
-            </p>
-
-            <ul class="nav__links">
-              <li class="nav__item"><NuxtLink class="nav__link" href="#about">About</NuxtLink></li>
-              <li class="nav__item">
-                <NuxtLink class="nav__link" href="#portfolio">Portfolio</NuxtLink>
-              </li>
-              <li class="nav__item">
-                <NuxtLink class="nav__link" href="#services">Services</NuxtLink>
-              </li>
-              <li class="nav__item">
-                <NuxtLink class="nav__link" href="#contacts">Contacts</NuxtLink>
-              </li>
-            </ul>
-
-            <p class="nav__text">Content</p>
-
-            <ul class="nav__socials">
-              <li class="nav__item">
-                <NuxtLink
-                  class="nav__social"
-                  href="https://www.instagram.com/nadyabeson"
-                  target="_blank"
-                  >Instagram</NuxtLink
-                >
-              </li>
-              <li class="nav__item">
-                <NuxtLink class="nav__social" href="https://t.me/NadyaBeson" target="_blank"
-                  >Telegram</NuxtLink
-                >
-              </li>
-              <li class="nav__item">
-                <NuxtLink
-                  class="nav__social"
-                  href="https://api.whatsapp.com/send?phone=972549029191"
-                  target="_blank"
-                  >WhatsApp</NuxtLink
-                >
-              </li>
-            </ul>
-
-            <div class="nav__contact">
-              <p>+972549029191</p>
-              <NuxtLink href="mailto:nadyabeson@gmail.com">nadyabeson@gmail.com</NuxtLink>
-            </div>
-
-            <p class="nav__copyright">Ⓒ All Rights Reserved</p>
-            <p class="nav__year">.2024</p>
-
-            <p class="nav__authors">
-              Created&nbsp;by&nbsp;Butcher/<br
-                class="nav__authors_multiline"
-              />Developed&nbsp;by&nbsp;Ɐrtem
-            </p>
-          </div>
-        </div>
-      </nav>
-
-      <!-- HEADER MENU END -->
-
-      <!-- HEADER TITLE -->
-      <p class="title">
-        Your story, <br />
-        immortalized in art
-      </p>
-      <!-- HEADER TITLE END -->
+      <Header />
 
       <!-- HERO GALLERY -->
       <div class="main__hero" v-for="image in heroImagesArray" :key="image.id">
@@ -466,42 +354,6 @@ watch(isMenuOpen, (newVal) => {
       <div class="divider-19" />
     </div>
 
-    <footer class="footer">
-      <p class="footer__year">.2024</p>
-      <h2 class="footer__title">Contacts</h2>
-      <ul class="footer__links">
-        <li><NuxtLink href="#about">About</NuxtLink></li>
-        <li><NuxtLink href="#services">Services</NuxtLink></li>
-        <li><NuxtLink href="#portfolio">Portfolio</NuxtLink></li>
-        <li><NuxtLink href="#contacts">Contacts</NuxtLink></li>
-        <li><NuxtLink to="#faq">FAQ</NuxtLink></li>
-      </ul>
-
-      <p class="footer__location">Israel, Haifa</p>
-      <ul class="footer__socials">
-        <li>
-          <NuxtLink href="https://www.instagram.com/nadyabeson" target="_blank">Instagram</NuxtLink>
-        </li>
-        <li><NuxtLink href="https://t.me/NadyaBeson" target="_blank">Telegram</NuxtLink></li>
-        <li>
-          <NuxtLink href="https://api.whatsapp.com/send?phone=972549029191" target="_blank"
-            >WhatsApp</NuxtLink
-          >
-        </li>
-      </ul>
-      <div class="footer__contact">
-        <p>+972549029191</p>
-        <NuxtLink href="mailto:nadyabeson@gmail.com">nadyabeson@gmail.com</NuxtLink>
-      </div>
-      <p class="footer__copyright">Ⓒ All Rights Reserved</p>
-      <p class="footer__authors">
-        Created&nbsp;by&nbsp;Butcher/<br
-          class="footer__authors_multiline"
-        />Developed&nbsp;by&nbsp;Ɐrtem
-      </p>
-      <div class="divider-20" />
-      <div class="divider-21" />
-      <div class="divider-22" />
-    </footer>
+    <Footer />
   </section>
 </template>

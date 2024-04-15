@@ -1,0 +1,213 @@
+.faq {
+  grid-area: faq;
+  font-size: 25px;
+  font-weight: 300;
+  padding-bottom: dynamic-size(50, 60, "mobile");
+
+  @include media(">=tablet") {
+    font-size: 46px;
+    padding-bottom: 60px;
+  }
+
+  @include media(">=desktop") {
+    font-size: 62px;
+    letter-spacing: -0.62px;
+  }
+}
+
+// https://codepen.io/raubaca/pen/PZzpVe
+/* Core styles/functionality */
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.tab__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.tab input:checked ~ .tab__content {
+  max-height: 10rem;
+  transition: all 0.4s;
+}
+
+.tab input:checked ~ .tab__content p {
+  color: #000;
+  transition: all 0.4s;
+  user-select: auto;
+}
+
+.tab input:checked ~ .tab__label {
+  transition: all 0.4s;
+  padding-bottom: 20px;
+
+  @include media(">=largeScreen") {
+    padding-bottom: 30px;
+  }
+}
+
+/* Visual styles */
+.accordion {
+  grid-area: accordion;
+  width: 100%;
+  border-bottom: 0.5px solid #d3d3d3;
+}
+.tab__label,
+.tab__close {
+  display: flex;
+  border-top: 0.5px solid #d3d3d3;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: -0.2px;
+  user-select: none;
+
+  @include media(">=tablet") {
+    font-size: 24px;
+    letter-spacing: -0.24px;
+  }
+
+  @include media(">=desktop") {
+    font-size: 32px;
+    letter-spacing: -0.32px;
+  }
+
+  @include media(">=largeScreen") {
+    font-size: 42px;
+    letter-spacing: -0.42px;
+  }
+}
+.tab__label {
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @include media(">=tablet") {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  @include media(">=desktop") {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+.tab__label span {
+  max-width: 277px;
+
+  @include media(">=tablet") {
+    max-width: 561px;
+  }
+
+  @include media(">=desktop") {
+    max-width: max-content;
+  }
+}
+
+.tab__content p {
+  color: transparent;
+  user-select: none;
+  padding-bottom: 25px;
+
+  @include media(">=tablet") {
+    max-width: 561px;
+    padding-bottom: 30px;
+  }
+
+  @include media(">=desktop") {
+    max-width: 631px;
+    padding-bottom: 35px;
+  }
+}
+
+.tab__label::after {
+  content: "+";
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab input:checked + .tab__label::after {
+  content: "−";
+}
+
+.tab__close {
+  justify-content: flex-end;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.slider-controls {
+  grid-area: slider-controls;
+  display: flex;
+  align-items: baseline;
+
+  button {
+    background: none;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  @include media(">=tablet") {
+    margin-top: auto;
+    margin-left: auto;
+  }
+
+  @include media(">=desktop") {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+.slider-info {
+  grid-area: slider-info;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include media(">=desktop") {
+    gap: 30px;
+    margin-top: auto;
+  }
+}
+
+.slider-counter {
+  white-space: nowrap;
+}
+
+.slider-image {
+  grid-area: slider-img;
+  width: 100%;
+}
+
+.slider-name {
+  grid-area: slider-name;
+  font-size: 25px;
+  font-weight: 300;
+
+  @include media(">=tablet") {
+    font-size: 46px;
+  }
+}
+
+.slider-signature {
+  color: #8d8d8d;
+  text-align: start;
+}
+
+.slider-details {
+  text-align: start;
+}
+
+.slider-prev {
+  padding-left: 0;
+  padding-right: 10px;
+}
+
+.slider-next {
+  padding-left: 10px;
+  padding-right: 0;
+}

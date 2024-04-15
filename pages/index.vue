@@ -7,7 +7,7 @@
 </script>
 
 <template>
-  <Home />
+  <Main />
 </template>
 
 <style lang="scss">
