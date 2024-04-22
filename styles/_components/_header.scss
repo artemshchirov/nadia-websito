@@ -8,6 +8,23 @@
   z-index: 900;
 }
 
+.title {
+  grid-area: title;
+  padding-bottom: dynamic-size(100, 218, "mobile");
+
+  @include media(">=tablet") {
+    padding-bottom: dynamic-size(218, 228, "tablet");
+  }
+
+  @include media(">=desktop") {
+    padding-bottom: dynamic-size(228, 301, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-bottom: 301px;
+  }
+}
+
 .nav {
   width: 100%;
   grid-area: nav;
@@ -196,41 +213,6 @@
 
     &:hover {
       opacity: 0.7;
-    }
-  }
-
-  // TODO: Refactor button to separate class
-  &__btn {
-    @include font-responsive;
-    position: relative;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      opacity: 0;
-      transition: $transition;
-    }
-
-    &:hover::before,
-    &:hover::after {
-      opacity: 1;
-    }
-
-    &::before {
-      content: "[";
-      left: 0;
-      transform: translateX(-100%) translateY(-5%);
-    }
-
-    &::after {
-      content: "]";
-      right: 0;
-      transform: translateX(100%) translateY(-5%);
     }
   }
 }

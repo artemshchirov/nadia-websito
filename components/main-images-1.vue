@@ -1,0 +1,45 @@
+<template>
+  <NuxtImg
+    class="image image-11"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(24)_70NE-0pD2.webp?updatedAt=1711983593390"
+    alt="Nadia"
+  />
+
+  <NuxtImg
+    class="image image-12"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(2)_JZIWeUACz.webp?updatedAt=1711983590273"
+    alt="Nadia"
+  />
+
+  <NuxtImg
+    class="image image-13"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(6)_NVp5gcWb6O.webp?updatedAt=1711983590251"
+    alt="Nadia"
+  />
+
+  <NuxtImg
+    class="image image-14"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(17)_PBaOO5QMQ.webp?updatedAt=1711983591974"
+    alt="Nadia"
+  />
+
+  <PortfolioLink />
+
+  <NuxtImg
+    class="image image-15"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(18)_92sl9-0-6.webp?updatedAt=1711983591691"
+    alt="Nadia"
+  />
+
+  <NuxtImg
+    class="image image-16"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(22)__VehIVXfb.webp?updatedAt=1711983592995"
+    alt="Nadia"
+  />
+
+  <NuxtImg
+    class="image image-17"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(16)_Qmu3O2nLU.webp?updatedAt=1711983591878"
+    alt="Nadia"
+  />
+</template>

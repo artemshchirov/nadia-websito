@@ -1,0 +1,33 @@
+.button {
+  @include font-responsive;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    transition: $transition;
+  }
+
+  &:hover::before,
+  &:hover::after {
+    opacity: 1;
+  }
+
+  &::before {
+    content: "[";
+    left: 0;
+    transform: translateX(-100%) translateY(-5%);
+  }
+
+  &::after {
+    content: "]";
+    right: 0;
+    transform: translateX(100%) translateY(-5%);
+  }
+}

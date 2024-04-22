@@ -1,0 +1,49 @@
+.role {
+  grid-area: role;
+  padding-top: dynamic-size(213, 272, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: dynamic-size(272, 306, "tablet");
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}
+
+.location {
+  grid-area: location;
+  padding-top: dynamic-size(213, 272, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: dynamic-size(272, 306, "tablet");
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}
+
+.phone {
+  grid-area: phone;
+
+  @include media(">=tablet") {
+    padding-top: dynamic-size(272, 306, "tablet");
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(306, 403, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 403px;
+  }
+}

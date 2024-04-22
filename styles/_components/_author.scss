@@ -1,0 +1,42 @@
+.author {
+  grid-area: img-8;
+}
+
+.name {
+  grid-area: name;
+  font-weight: 300;
+
+  font-size: 25px;
+  line-height: 1.2;
+
+  @include media(">=tablet") {
+    font-size: 46px;
+  }
+}
+
+.details {
+  @include flex($gap: dynamic-size(20, 15, "mobile"), $direction: column);
+  grid-area: details;
+
+  @include media(">=tablet") {
+    gap: dynamic-size(15, 30, "tablet");
+  }
+
+  &__item {
+    @include flex($gap: 5px, $direction: column);
+  }
+
+  &__term {
+    color: #aeaeae;
+  }
+}
+
+.bio {
+  @include font-responsive;
+  grid-area: bio;
+  padding-top: 20px;
+
+  @include media(">=tablet") {
+    padding-top: dynamic-size(20, 30, "tablet");
+  }
+}

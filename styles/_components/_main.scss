@@ -18,23 +18,6 @@
   }
 }
 
-.title {
-  grid-area: title;
-  padding-bottom: dynamic-size(100, 218, "mobile");
-
-  @include media(">=tablet") {
-    padding-bottom: dynamic-size(218, 228, "tablet");
-  }
-
-  @include media(">=desktop") {
-    padding-bottom: dynamic-size(228, 301, "desktop");
-  }
-
-  @include media(">=largeScreen") {
-    padding-bottom: 301px;
-  }
-}
-
 .main {
   @include grid-main;
 
@@ -104,60 +87,6 @@
   }
 }
 
-.role {
-  grid-area: role;
-  padding-top: dynamic-size(213, 272, "mobile");
-
-  @include media(">=tablet") {
-    padding-top: dynamic-size(272, 306, "tablet");
-  }
-
-  @include media(">=desktop") {
-    padding-top: dynamic-size(306, 403, "desktop");
-  }
-
-  @include media(">=largeScreen") {
-    padding-top: 403px;
-  }
-}
-
-.location {
-  grid-area: location;
-  padding-top: dynamic-size(213, 272, "mobile");
-
-  @include media(">=tablet") {
-    padding-top: dynamic-size(272, 306, "tablet");
-  }
-
-  @include media(">=desktop") {
-    padding-top: dynamic-size(306, 403, "desktop");
-  }
-
-  @include media(">=largeScreen") {
-    padding-top: 403px;
-  }
-}
-
-.phone {
-  grid-area: phone;
-
-  @include media(">=tablet") {
-    padding-top: dynamic-size(272, 306, "tablet");
-  }
-
-  @include media(">=desktop") {
-    padding-top: dynamic-size(306, 403, "desktop");
-  }
-
-  @include media(">=largeScreen") {
-    padding-top: 403px;
-  }
-}
-
-.portrait {
-  grid-area: img-8;
-}
-
 .image {
   display: block;
   width: 100%;
@@ -169,18 +98,6 @@
 
   @include media(">=desktop") {
     margin-bottom: 0;
-  }
-}
-
-.name {
-  grid-area: name;
-  font-weight: 300;
-
-  font-size: 25px;
-  line-height: 1.2;
-
-  @include media(">=tablet") {
-    font-size: 46px;
   }
 }
 
@@ -269,65 +186,6 @@
   grid-area: img-26;
 }
 
-.details {
-  @include flex($gap: dynamic-size(20, 15, "mobile"), $direction: column);
-  grid-area: details;
-
-  @include media(">=tablet") {
-    gap: dynamic-size(15, 30, "tablet");
-  }
-
-  &__item {
-    @include flex($gap: 5px, $direction: column);
-  }
-
-  &__term {
-    color: #aeaeae;
-  }
-}
-
-.bio {
-  @include font-responsive;
-  grid-area: bio;
-  padding-top: 20px;
-
-  @include media(">=tablet") {
-    padding-top: dynamic-size(20, 30, "tablet");
-  }
-}
-
-.link {
-  &-1 {
-    grid-area: link-1;
-    margin: auto 0 0 auto;
-  }
-}
-
-.area {
-  grid-area: area;
-  margin: auto auto auto 0;
-  font-size: 25px;
-  font-weight: 300;
-  max-width: 330px;
-
-  @include media(">=tablet") {
-    font-size: 46px;
-    text-align: end;
-    max-width: 561px;
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  @include media(">=desktop") {
-    max-width: 655px;
-  }
-
-  @include media(">=largeScreen") {
-    font-size: 62px;
-    max-width: 934px;
-  }
-}
-
 .oneline {
   display: none;
 
@@ -342,111 +200,5 @@
 
   @include media(">=tablet") {
     display: none;
-  }
-}
-
-.divider {
-  &-1 {
-    @include section-top-divider;
-    grid-area: divider-1;
-  }
-  &-2 {
-    @include section-top-divider;
-    grid-area: divider-2;
-  }
-  &-3 {
-    @include section-top-divider;
-    grid-area: divider-3;
-  }
-  &-4 {
-    @include section-top-divider;
-    grid-area: divider-4;
-  }
-  &-5 {
-    @include section-top-divider;
-    grid-area: divider-5;
-  }
-  &-6 {
-    @include section-top-divider;
-    grid-area: divider-6;
-  }
-  &-7 {
-    @include section-top-divider;
-    grid-area: divider-7;
-  }
-  &-8 {
-    @include section-top-divider;
-    grid-area: divider-8;
-  }
-  &-9 {
-    @include section-top-divider;
-    grid-area: divider-9;
-  }
-  &-10 {
-    @include section-top-divider;
-    grid-area: divider-10;
-  }
-  &-11 {
-    @include section-top-divider;
-    grid-area: divider-11;
-  }
-  &-12 {
-    @include section-top-divider;
-    grid-area: divider-12;
-  }
-  &-13 {
-    @include section-top-divider;
-    grid-area: divider-13;
-  }
-  &-14 {
-    @include section-top-divider;
-    grid-area: divider-14;
-  }
-  &-15 {
-    @include section-top-divider;
-    grid-area: divider-15;
-  }
-  &-16 {
-    @include section-top-divider;
-    grid-area: divider-16;
-  }
-  &-17 {
-    @include section-top-divider;
-    grid-area: divider-17;
-  }
-  &-18 {
-    @include section-top-divider;
-    grid-area: divider-18;
-  }
-  &-19 {
-    @include section-top-divider;
-    grid-area: divider-19;
-  }
-  &-20 {
-    @include section-top-divider;
-    grid-area: divider-20;
-    display: none;
-
-    @include media(">=tablet") {
-      display: block;
-    }
-  }
-  &-21 {
-    @include section-top-divider;
-    grid-area: divider-21;
-    display: none;
-
-    @include media(">=tablet") {
-      display: block;
-    }
-  }
-  &-22 {
-    @include section-top-divider;
-    grid-area: divider-22;
-    display: none;
-
-    @include media(">=tablet") {
-      display: block;
-    }
   }
 }

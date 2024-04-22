@@ -1,0 +1,24 @@
+.areas {
+  grid-area: areas;
+  margin: auto auto auto 0;
+  font-size: 25px;
+  font-weight: 300;
+  max-width: 330px;
+
+  @include media(">=tablet") {
+    font-size: 46px;
+    text-align: end;
+    max-width: 561px;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  @include media(">=desktop") {
+    max-width: 655px;
+  }
+
+  @include media(">=largeScreen") {
+    font-size: 62px;
+    max-width: 934px;
+  }
+}
