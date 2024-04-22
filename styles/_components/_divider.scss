@@ -1,105 +1,122 @@
 .divider {
-  &-1 {
-    @include section-top-divider;
-    grid-area: divider-1;
-  }
-  &-2 {
-    @include section-top-divider;
-    grid-area: divider-2;
-  }
-  &-3 {
-    @include section-top-divider;
-    grid-area: divider-3;
-  }
-  &-4 {
-    @include section-top-divider;
-    grid-area: divider-4;
-  }
-  &-5 {
-    @include section-top-divider;
-    grid-area: divider-5;
-  }
-  &-6 {
-    @include section-top-divider;
-    grid-area: divider-6;
-  }
-  &-7 {
-    @include section-top-divider;
-    grid-area: divider-7;
-  }
-  &-8 {
-    @include section-top-divider;
-    grid-area: divider-8;
-  }
-  &-9 {
-    @include section-top-divider;
-    grid-area: divider-9;
-  }
-  &-10 {
-    @include section-top-divider;
-    grid-area: divider-10;
-  }
-  &-11 {
-    @include section-top-divider;
-    grid-area: divider-11;
-  }
-  &-12 {
-    @include section-top-divider;
-    grid-area: divider-12;
-  }
-  &-13 {
-    @include section-top-divider;
-    grid-area: divider-13;
-  }
-  &-14 {
-    @include section-top-divider;
-    grid-area: divider-14;
-  }
-  &-15 {
-    @include section-top-divider;
-    grid-area: divider-15;
-  }
-  &-16 {
-    @include section-top-divider;
-    grid-area: divider-16;
-  }
-  &-17 {
-    @include section-top-divider;
-    grid-area: divider-17;
-  }
-  &-18 {
-    @include section-top-divider;
-    grid-area: divider-18;
-  }
-  &-19 {
-    @include section-top-divider;
-    grid-area: divider-19;
-  }
-  &-20 {
-    @include section-top-divider;
-    grid-area: divider-20;
-    display: none;
-
-    @include media(">=tablet") {
-      display: block;
+  &-sm {
+    &-1 {
+      @include section-divider-sm;
+      grid-area: divider-sm-1;
+    }
+    &-2 {
+      @include section-divider-sm;
+      grid-area: divider-sm-2;
+    }
+    &-3 {
+      @include section-divider-sm;
+      grid-area: divider-sm-3;
     }
   }
-  &-21 {
-    @include section-top-divider;
-    grid-area: divider-21;
-    display: none;
 
-    @include media(">=tablet") {
-      display: block;
+  &-md {
+    &-1 {
+      @include section-divider-md;
+      grid-area: divider-md-1;
     }
-  }
-  &-22 {
-    @include section-top-divider;
-    grid-area: divider-22;
-    display: none;
+    &-2 {
+      @include section-divider-md;
+      grid-area: divider-md-2;
+    }
+    &-3 {
+      @include section-divider-md;
+      grid-area: divider-md-3;
+    }
+    &-4 {
+      @include section-divider-md;
+      grid-area: divider-md-4;
+    }
+    &-5 {
+      @include section-divider-md;
+      grid-area: divider-md-5;
+    }
+    &-6 {
+      @include section-divider-md;
+      grid-area: divider-md-6;
+    }
+    &-7 {
+      @include section-divider-md;
+      grid-area: divider-md-7;
+    }
+    &-8 {
+      @include section-divider-md;
+      grid-area: divider-md-8;
+    }
+    &-9 {
+      @include section-divider-md;
+      grid-area: divider-md-9;
+    }
+    &-10 {
+      @include section-divider-md;
+      grid-area: divider-md-10;
+    }
+    &-11 {
+      @include section-divider-md;
+      grid-area: divider-md-11;
+    }
+    &-12 {
+      @include section-divider-md;
+      grid-area: divider-md-12;
+    }
+    &-13 {
+      @include section-divider-md;
+      grid-area: divider-md-13;
+    }
+    &-14 {
+      @include section-divider-md;
+      grid-area: divider-md-14;
+    }
+    &-15 {
+      @include section-divider-md;
+      grid-area: divider-md-15;
+    }
+    &-16 {
+      @include section-divider-md;
+      grid-area: divider-md-16;
+    }
+    &-17 {
+      @include section-divider-md;
+      grid-area: divider-md-17;
+    }
+    &-18 {
+      @include section-divider-md;
+      grid-area: divider-md-18;
+    }
+    &-19 {
+      @include section-divider-md;
+      grid-area: divider-md-19;
+    }
+    &-20 {
+      @include section-divider-md;
+      grid-area: divider-md-20;
+      display: none;
 
-    @include media(">=tablet") {
-      display: block;
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+    &-21 {
+      @include section-divider-md;
+      grid-area: divider-md-21;
+      display: none;
+
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+    &-22 {
+      @include section-divider-md;
+      grid-area: divider-md-22;
+      display: none;
+
+      @include media(">=tablet") {
+        display: block;
+      }
     }
   }
 }

@@ -9,10 +9,3 @@
 <template>
   <Main />
 </template>
-
-<style lang="scss">
-.section {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-</style>

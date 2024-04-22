@@ -7,7 +7,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
 
 <template>
   <nav class="nav">
-    <button class="nav button" @click="toggleMenu">Menu</button>
+    <button class="button" @click="toggleMenu">Menu</button>
 
     <div class="nav__menu" :class="{ 'menu-open': isMenuOpen }">
       <div class="overlay" v-if="isMenuOpen" @click="toggleMenu" />
@@ -77,7 +77,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
     </div>
   </nav>
 
-  <p class="title">
+  <p class="title space-bottom">
     Your story, <br />
     immortalized in art
   </p>

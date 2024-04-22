@@ -32,8 +32,8 @@
         class="footer__authors_multiline"
       />Developed&nbsp;by&nbsp;Ɐrtem
     </p>
-    <div class="divider-20" />
-    <div class="divider-21" />
-    <div class="divider-22" />
+    <div class="divider-md-20" />
+    <div class="divider-md-21" />
+    <div class="divider-md-22" />
   </footer>
 </template>

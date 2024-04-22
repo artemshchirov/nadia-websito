@@ -67,7 +67,11 @@ $viewport-sizes: (
   );
 }
 
-@mixin section-top-divider {
+@mixin section-divider-sm {
+  padding-top: dynamic-size(50, 100, "mobile");
+}
+
+@mixin section-divider-md {
   padding-top: dynamic-size(100, 150, "mobile");
 
   @include media(">=desktop") {

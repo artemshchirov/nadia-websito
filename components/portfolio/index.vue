@@ -4,9 +4,9 @@
   <section class="page">
     <div class="main section">
       <SharedHeader />
-
+      <Lens />
       <SharedCommonImages />
-      <Dividers />
+      <SharedDividers />
     </div>
 
     <Footer />

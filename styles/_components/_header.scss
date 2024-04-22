@@ -10,6 +10,9 @@
 
 .title {
   grid-area: title;
+}
+
+.space-bottom {
   padding-bottom: dynamic-size(100, 218, "mobile");
 
   @include media(">=tablet") {

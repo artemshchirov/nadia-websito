@@ -22,8 +22,6 @@
       <SharedCommonImages />
 
       <SharedFaq />
-
-      <SharedDividers />
     </div>
 
     <Footer />

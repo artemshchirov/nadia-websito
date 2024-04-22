@@ -18,11 +18,11 @@
 
   @include media(">=desktop") {
     grid-template-areas:
-      "divider-20 . . . . . . . . . . . . ."
+      "divider-md-20 . . . . . . . . . . . . ."
       "footer__location . footer__title footer__title footer__title . . . links . socials . contact ."
-      "divider-21 . . . . . . . . . . . . ."
+      "divider-md-21 . . . . . . . . . . . . ."
       "copyright copyright . . . . . . year . authors authors authors ."
-      "divider-22 . . . . . . . . . . . . .";
+      "divider-md-22 . . . . . . . . . . . . .";
   }
 
   margin-top: 25px;
