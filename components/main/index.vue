@@ -1,7 +1,7 @@
 <template>
   <section class="page">
     <div class="main section">
-      <SharedHeader />
+      <SharedHeader is-main-page />
 
       <MainHero />
 

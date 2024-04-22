@@ -2,6 +2,10 @@
 import { useMenu } from "@/hooks/use-menu";
 import CloseIcon from "@/icons/close-icon.vue";
 
+const props = defineProps<{
+  isMainPage?: boolean;
+}>();
+
 const { isMenuOpen, toggleMenu } = useMenu();
 </script>
 
@@ -77,7 +81,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
     </div>
   </nav>
 
-  <p class="title space-bottom">
+  <p class="title" :class="{ 'space-bottom': props.isMainPage }">
     Your story, <br />
     immortalized in art
   </p>
