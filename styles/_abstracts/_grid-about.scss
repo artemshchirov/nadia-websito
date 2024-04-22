@@ -1,0 +1,76 @@
+@mixin grid-about {
+  @include grid(repeat(4, 1fr), auto, 0, start);
+  grid-template-areas:
+    "nav . title title"
+    "divider-md-1 . . ."
+    ". greetings . ."
+    "divider-md-2 . . ."
+    ". name name name"
+    "img-about-1 . . ."
+    ". welcome welcome welcome"
+    ". . . img-about-2"
+    "divider-sm-1 . . ."
+    "img-about-3 img-about-3 img-about-3 ."
+    "bio bio bio bio"
+    "divider-md-3 . . ."
+    "img-about-4 . . ."
+    ". education-title education-title education-title"
+    ". education-text education-text education-text"
+    "divider-md-4 . . ."
+    "divider-md-17 . . ."
+    "img-common-1 . . ."
+    ". . . img-common-2"
+    "img-common-3 img-common-3 img-common-3 ."
+    "divider-md-18 . . ."
+    ". . img-common-4 ."
+    "divider-md-19 . . ."
+    ". . faq ."
+    "accordion accordion accordion accordion"
+    "footer footer footer footer";
+
+  @include media(">=tablet") {
+    grid-template-columns:
+      repeat(2, minmax(94.5px, auto))
+      repeat(2, minmax(92.5px, auto))
+      repeat(2, minmax(92px, auto))
+      repeat(2, minmax(92.5px, auto));
+
+    grid-template-areas:
+      ". . . . nav . title title"
+      "divider-md-14 . . . . . . ."
+      ". img-common-1 . . . . . ."
+      ". . . . . . img-common-2 img-common-2"
+      "img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 . ."
+      "divider-md-15 . . . . . . ."
+      ". . . . img-common-4 img-common-4 . ."
+      "divider-md-16 . . . . . . ."
+      ". . . . faq . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer";
+  }
+
+  @include media(">=desktop") {
+    grid-template-columns:
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(116px, auto));
+
+    grid-template-areas:
+      ". . . . . . . . nav . . . title title"
+      "divider-md-13 . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . .  img-common-1"
+      "divider-md-14 . . . . . . . . . . . . ."
+      ". . . . . . . . . . img-common-2 img-common-2 . ."
+      "img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 . . . ."
+      "divider-md-15 . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . img-common-4 img-common-4"
+      "divider-md-16 . . . . . . . . . . . . ."
+      ". . . . . . . . faq . . . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}

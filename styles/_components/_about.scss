@@ -1,3 +1,73 @@
 .about {
-  @include grid-main;
+  @include grid-about;
+
+  &__greetings {
+    grid-area: greetings;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &__welcome {
+    grid-area: welcome;
+  }
+
+  &__bio {
+    grid-area: bio;
+  }
+
+  &__education {
+    &-title {
+      grid-area: education-title;
+    }
+
+    &-text {
+      grid-area: education-text;
+    }
+  }
+}
+
+.image {
+  &-about {
+    &-1 {
+      grid-area: img-about-1;
+    }
+
+    &-2 {
+      grid-area: img-about-2;
+    }
+
+    &-3 {
+      grid-area: img-about-3;
+    }
+
+    &-4 {
+      grid-area: img-about-4;
+    }
+
+    &-5 {
+      grid-area: img-about-5;
+    }
+
+    &-6 {
+      grid-area: img-about-6;
+    }
+
+    &-7 {
+      grid-area: img-about-7;
+    }
+
+    &-8 {
+      grid-area: img-about-8;
+    }
+
+    &-9 {
+      grid-area: img-about-9;
+    }
+
+    &-10 {
+      grid-area: img-about-10;
+    }
+  }
 }
