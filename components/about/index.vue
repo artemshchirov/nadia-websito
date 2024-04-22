@@ -2,8 +2,12 @@
 
 <template>
   <section class="page">
-    <div class="main section">
-      <Header />
+    <div class="about section">
+      <SharedHeader />
+
+      <Lens />
+
+      <SharedCommonImages />
 
       <Dividers />
     </div>

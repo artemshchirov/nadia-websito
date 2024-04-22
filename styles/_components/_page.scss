@@ -1,0 +1,66 @@
+.page {
+  @include font-responsive;
+  color: $font-color-primary;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-top: dynamic-size(40, 20, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: 20px;
+  }
+
+  @include media(">=desktop") {
+    padding-top: dynamic-size(20, 40, "desktop");
+  }
+
+  @include media(">=largeScreen") {
+    padding-top: 40px;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.crop {
+  margin-bottom: -10px;
+
+  @include media(">=desktop") {
+    margin-bottom: 0;
+  }
+}
+
+.oneline {
+  display: none;
+
+  @include media(">=tablet") {
+    display: inline-block;
+  }
+}
+
+.multiline {
+  margin-top: 4px;
+  margin-bottom: -4px;
+
+  @include media(">=tablet") {
+    display: none;
+  }
+}
+
+.image-common-1 {
+  grid-area: img-common-1;
+}
+
+.image-common-2 {
+  grid-area: img-common-2;
+}
+
+.image-common-3 {
+  grid-area: img-common-3;
+}
+
+.image-common-4 {
+  grid-area: img-common-4;
+}

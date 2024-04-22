@@ -8,7 +8,7 @@
   <h1 class="name">Nadya Besson</h1>
 
   <NuxtImg
-    class="image image-9"
+    class="image image-main-9"
     src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(5)_XvjoCwd6g.webp?updatedAt=1711983590048"
     alt="Nadya Besson posing with a yellow background"
   />
