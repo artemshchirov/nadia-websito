@@ -69,6 +69,10 @@ $viewport-sizes: (
 
 @mixin section-divider-sm {
   padding-top: dynamic-size(50, 100, "mobile");
+
+  @include media(">=tablet") {
+    padding-top: 100px;
+  }
 }
 
 @mixin section-divider-md {
