@@ -24,6 +24,6 @@
       <SharedFaq />
     </div>
 
-    <Footer />
+    <SharedFooter />
   </section>
 </template>

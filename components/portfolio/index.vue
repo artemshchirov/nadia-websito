@@ -9,6 +9,6 @@
       <SharedDividers />
     </div>
 
-    <Footer />
+    <SharedFooter />
   </section>
 </template>
