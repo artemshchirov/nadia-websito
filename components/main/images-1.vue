@@ -42,4 +42,10 @@
     src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(16)_Qmu3O2nLU.webp?updatedAt=1711983591878"
     alt="Nadia"
   />
+
+  <NuxtImg
+    class="image image-main-18"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(21)_WNU0GT1q1.webp?updatedAt=1711983593198"
+    alt="Nadia"
+  />
 </template>

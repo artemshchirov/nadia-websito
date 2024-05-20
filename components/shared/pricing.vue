@@ -1,11 +1,5 @@
 <!-- TODO: Dynamic margins and spacing -->
 <template>
-  <NuxtImg
-    class="image image-main-18"
-    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(21)_WNU0GT1q1.webp?updatedAt=1711983593198"
-    alt="Nadia"
-  />
-
   <ul class="pricing">
     <li class="pricing__item">
       <h3 class="pricing__title">Portrait photoshoot</h3>

@@ -1,0 +1,116 @@
+@mixin grid-portfolio {
+  @include grid(repeat(4, 1fr), auto, 0, start);
+  grid-template-areas:
+    "nav . title title"
+    "divider-md-1 . . ."
+    "lens lens lens lens"
+    "divider-md-2 . . ."
+    ". . img-portfolio-1 img-portfolio-1"
+    "img-portfolio-2 img-portfolio-2 . ."
+    ". . img-portfolio-3 img-portfolio-3"
+    "img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4"
+    "img-portfolio-5 img-portfolio-5 . ."
+    ". . img-portfolio-6 img-portfolio-6"
+    "img-portfolio-7 img-portfolio-7 . ."
+    "img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8"
+    "img-portfolio-9 img-portfolio-9 . ."
+    "img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10"
+    "divider-md-3 . . ."
+    "pricing pricing pricing pricing"
+    "divider-md-4 . . ."
+    "slider-name slider-img slider-img slider-controls"
+    "slider-info slider-info slider-info slider-info"
+    "divider-md-5 . . ."
+    "img-common-1 . . ."
+    ". . . img-common-2"
+    "img-common-3 img-common-3 img-common-3 ."
+    "divider-md-6 . . ."
+    ". . img-common-4 ."
+    "divider-md-7 . . ."
+    ". . faq ."
+    "accordion accordion accordion accordion"
+    "footer footer footer footer";
+
+  @include media(">=tablet") {
+    grid-template-columns:
+      repeat(2, minmax(94.5px, auto))
+      repeat(2, minmax(92.5px, auto))
+      repeat(2, minmax(92px, auto))
+      repeat(2, minmax(92.5px, auto));
+
+    grid-template-areas:
+      ". . . . nav . title title"
+      "divider-md-1 . . . . . . ."
+      "lens lens lens lens lens lens lens lens"
+      "divider-md-2 . . . . . . ."
+      ". . . . img-portfolio-1 img-portfolio-1 img-portfolio-1 img-portfolio-1"
+      "img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 . . . ."
+      ". . . . img-portfolio-3 img-portfolio-3 img-portfolio-3 img-portfolio-3"
+      "img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4"
+      "img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 . . . ."
+      ". . . . img-portfolio-6 img-portfolio-6 img-portfolio-6 img-portfolio-6"
+      "img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 . . . ."
+      "img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8"
+      "img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 . . . ."
+      "img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10"
+      "divider-md-3 . . . . . . ."
+      ". . . pricing pricing pricing pricing pricing"
+      "divider-md-13 . . . . . . ."
+      "slider-name slider-name slider-img slider-img slider-img slider-img slider-img slider-img"
+      "slider-controls slider-controls slider-img slider-img slider-img slider-img slider-img slider-img"
+      ". . slider-info slider-info slider-info slider-info slider-info slider-info"
+      "divider-md-14 . . . . . . ."
+      ". img-common-1 . . . . . ."
+      ". . . . . . img-common-2 img-common-2"
+      "img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 . ."
+      "divider-md-15 . . . . . . ."
+      ". . . . img-common-4 img-common-4 . ."
+      "divider-md-16 . . . . . . ."
+      ". . . . faq . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer";
+  }
+
+  @include media(">=desktop") {
+    grid-template-columns:
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(117px, auto))
+      repeat(2, minmax(81px, auto))
+      repeat(2, minmax(116px, auto));
+
+    grid-template-areas:
+      ". . . . . . . . nav . . . title title"
+      "divider-md-1 . . . . . . . . . . . . ."
+      "lens lens lens lens lens lens lens lens lens lens lens lens lens lens"
+      "divider-md-2 . . . . . . . . . . . . ."
+      ". . . . . . . . img-portfolio-1 img-portfolio-1 img-portfolio-1 img-portfolio-1 img-portfolio-1 img-portfolio-1"
+      "img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 img-portfolio-2 . . . . . ."
+      ". . . . . . . . img-portfolio-3 img-portfolio-3 img-portfolio-3 img-portfolio-3 img-portfolio-3 img-portfolio-3"
+      "img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4 img-portfolio-4"
+      "img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 img-portfolio-5 . . . . . ."
+      ". . . . . . . . img-portfolio-6 img-portfolio-6 img-portfolio-6 img-portfolio-6 img-portfolio-6 img-portfolio-6"
+      "img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 img-portfolio-7 . . . . . ."
+      "img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8 img-portfolio-8"
+      "img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 img-portfolio-9 . . . . . ."
+      "img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10 img-portfolio-10"
+      "divider-md-3  . . . . . . . . . . . . ."
+      ". . . . . . . . pricing pricing pricing pricing pricing pricing"
+      "divider-md-4  . . . . . . . . . . . . ."
+      "slider-name slider-name slider-img slider-img slider-img slider-img slider-img slider-img slider-controls slider-controls . . . ."
+      ". . slider-img slider-img slider-img slider-img slider-img slider-img slider-info slider-info slider-info slider-info . ."
+      "divider-md-16 . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . .  img-common-1"
+      "divider-md-17 . . . . . . . . . . . . ."
+      ". . . . . . . . . . img-common-2 img-common-2 . ."
+      "img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 img-common-3 . . . ."
+      "divider-md-18 . . . . . . . . . . . . ."
+      ". . . . . . . . . . . . img-common-4 img-common-4"
+      "divider-md-19 . . . . . . . . . . . . ."
+      ". . . . . . . . faq . . . . ."
+      "accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion accordion"
+      "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}

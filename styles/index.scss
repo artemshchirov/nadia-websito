@@ -6,6 +6,7 @@
 @import "_abstracts/mixins";
 @import "_abstracts/grid-main";
 @import "_abstracts/grid-about";
+@import "_abstracts/grid-portfolio";
 
 @import "_base/reset";
 @import "_base/fonts";
@@ -16,6 +17,7 @@
 @import "_components/about";
 @import "_components/portfolio";
 @import "_components/header";
+@import "_components/lens";
 @import "_components/contact";
 @import "_components/author";
 @import "_components/areas";
