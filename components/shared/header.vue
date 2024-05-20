@@ -20,10 +20,10 @@ const { isMenuOpen, toggleMenu } = useMenu();
           <CloseIcon />
         </button>
 
-        <p class="nav__title">
+        <NuxtLink to="/" class="nav__title">
           Your story, <br />
           immortalized in art
-        </p>
+        </NuxtLink>
 
         <ul class="nav__links">
           <li class="nav__item"><NuxtLink class="nav__link" href="#about">About</NuxtLink></li>
@@ -81,8 +81,8 @@ const { isMenuOpen, toggleMenu } = useMenu();
     </div>
   </nav>
 
-  <p class="title" :class="{ 'space-bottom': props.isMainPage }">
+  <NuxtLink to="/" class="title" :class="{ 'space-bottom': props.isMainPage }">
     Your story, <br />
     immortalized in art
-  </p>
+  </NuxtLink>
 </template>
