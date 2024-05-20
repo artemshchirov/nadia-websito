@@ -8,6 +8,10 @@
     @include media(">=tablet") {
       padding-bottom: 20px;
     }
+
+    @include media(">=desktop") {
+      padding-bottom: 10px;
+    }
   }
 
   &__greetings {
@@ -20,10 +24,18 @@
 
   &__welcome {
     grid-area: welcome;
+
+    @include media(">=desktop") {
+      margin-top: auto;
+    }
   }
 
   &__bio {
     grid-area: bio;
+
+    @include media(">=desktop") {
+      margin-top: auto;
+    }
   }
 
   &__education {
@@ -72,6 +84,10 @@
 
       @include media(">=tablet") {
         margin-top: 40px;
+      }
+
+      @include media(">=desktop") {
+        margin-top: 0;
       }
     }
 
