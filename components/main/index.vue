@@ -22,8 +22,9 @@
       <SharedCommonImages />
 
       <SharedFaq />
-    </div>
 
+      <SharedDividers />
+    </div>
     <SharedFooter />
   </section>
 </template>

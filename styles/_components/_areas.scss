@@ -21,4 +21,24 @@
     font-size: 62px;
     max-width: 934px;
   }
+
+  &_about {
+    grid-area: areas-about;
+    text-align: end;
+    margin-left: auto;
+    margin-right: 0;
+  }
+
+  &_goal {
+    grid-area: areas-goal;
+    max-width: 540px;
+    text-align: start;
+
+    @include media(">=tablet") {
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.24px;
+    }
+  }
 }

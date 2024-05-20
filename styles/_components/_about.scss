@@ -1,6 +1,15 @@
 .about {
   @include grid-about;
 
+  &__subtitle {
+    color: #aeaeae;
+    padding-bottom: 10px;
+
+    @include media(">=tablet") {
+      padding-bottom: 20px;
+    }
+  }
+
   &__greetings {
     grid-area: greetings;
   }
@@ -26,6 +35,30 @@
       grid-area: education-text;
     }
   }
+
+  &__whyme {
+    &-title {
+      grid-area: whyme-title;
+    }
+
+    &-text {
+      grid-area: whyme-text;
+    }
+  }
+
+  &__goal {
+    grid-area: goal;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+
+  &__contact {
+    grid-area: contact;
+
+    @include media(">=tablet") {
+      margin: auto 0;
+    }
+  }
 }
 
 .image {
@@ -36,6 +69,10 @@
 
     &-2 {
       grid-area: img-about-2;
+
+      @include media(">=tablet") {
+        margin-top: 40px;
+      }
     }
 
     &-3 {
@@ -48,6 +85,7 @@
 
     &-5 {
       grid-area: img-about-5;
+      margin: auto;
     }
 
     &-6 {
@@ -68,6 +106,42 @@
 
     &-10 {
       grid-area: img-about-10;
+    }
+
+    &-11 {
+      grid-area: img-about-11;
+    }
+
+    &-12 {
+      grid-area: img-about-12;
+    }
+
+    &-13 {
+      grid-area: img-about-13;
+    }
+
+    &-14 {
+      grid-area: img-about-14;
+    }
+
+    &-15 {
+      grid-area: img-about-15;
+    }
+
+    &-16 {
+      grid-area: img-about-16;
+    }
+
+    &-17 {
+      grid-area: img-about-17;
+    }
+
+    &-18 {
+      grid-area: img-about-18;
+
+      @include media(">=tablet") {
+        margin: auto 0;
+      }
     }
   }
 }
