@@ -1,7 +1,7 @@
 <template>
-  <div class="link link-portfolio">
+  <div class="link link-about">
     <NuxtLink style="display: flex; align-items: center; gap: 4px" to="/portfolio"
-      >Portfolio
+      >See all
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="16"

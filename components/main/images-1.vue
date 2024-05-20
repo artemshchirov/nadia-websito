@@ -23,7 +23,7 @@
     alt="Nadia"
   />
 
-  <SharedPortfolioLink />
+  <SharedAboutLink />
 
   <NuxtImg
     class="image image-main-15"

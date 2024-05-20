@@ -1,6 +1,11 @@
 .link {
-  &-1 {
-    grid-area: link-1;
+  &-about {
+    grid-area: link-about;
     margin: auto 0 0 auto;
+  }
+
+  &-portfolio {
+    grid-area: link-portfolio;
+    margin: auto auto 0 0;
   }
 }
