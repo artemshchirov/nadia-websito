@@ -166,7 +166,7 @@
 
       <SharedFaq />
 
-      <SharedDividers />
+      <AboutDividers />
     </div>
 
     <SharedFooter />

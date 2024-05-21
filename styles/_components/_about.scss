@@ -20,6 +20,17 @@
 
   &__name {
     grid-area: name;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 1.2;
+
+    @include media(">=tablet") {
+      font-size: 46px;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: 62px;
+    }
   }
 
   &__welcome {

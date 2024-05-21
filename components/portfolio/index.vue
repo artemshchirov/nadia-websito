@@ -75,7 +75,7 @@
 
       <SharedFaq />
 
-      <SharedDividers />
+      <PortfolioDividers />
     </div>
 
     <SharedFooter />

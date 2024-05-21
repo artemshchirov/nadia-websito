@@ -119,4 +119,147 @@
       }
     }
   }
+
+  &_about {
+    &_sm {
+      &-1 {
+        @include section-divider-sm;
+        grid-area: divider-sm-1;
+      }
+    }
+
+    &_md {
+      &-1 {
+        @include section-divider-md;
+        grid-area: divider-md-1;
+      }
+      &-2 {
+        @include section-divider-md;
+        grid-area: divider-md-2;
+      }
+      &-3 {
+        @include section-divider-md;
+        grid-area: divider-md-3;
+      }
+      &-4 {
+        @include section-divider-md;
+        grid-area: divider-md-4;
+      }
+      &-5 {
+        @include section-divider-md;
+        grid-area: divider-md-5;
+      }
+      &-6 {
+        @include section-divider-md;
+        grid-area: divider-md-6;
+      }
+      &-7 {
+        @include section-divider-md;
+        grid-area: divider-md-7;
+      }
+      &-8 {
+        @include section-divider-md;
+        grid-area: divider-md-8;
+      }
+      &-9 {
+        @include section-divider-md;
+        grid-area: divider-md-9;
+      }
+      &-10 {
+        @include section-divider-md;
+        grid-area: divider-md-10;
+      }
+      &-11 {
+        @include section-divider-md;
+        grid-area: divider-md-11;
+      }
+      &-12 {
+        @include section-divider-md;
+        grid-area: divider-md-12;
+      }
+      &-13 {
+        @include section-divider-md;
+        grid-area: divider-md-13;
+      }
+      &-14 {
+        @include section-divider-md;
+        grid-area: divider-md-14;
+      }
+      &-15 {
+        @include section-divider-md;
+        grid-area: divider-md-15;
+      }
+      &-16 {
+        @include section-divider-md;
+        grid-area: divider-md-16;
+      }
+      &-17 {
+        @include section-divider-md;
+        grid-area: divider-md-17;
+
+        @include media(">=tablet") {
+          display: none;
+        }
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
+      &-18 {
+        @include section-divider-md;
+        grid-area: divider-md-18;
+
+        @include media(">=tablet") {
+          display: none;
+        }
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
+      &-19 {
+        @include section-divider-md;
+        grid-area: divider-md-19;
+        display: none;
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &_portfolio {
+    &_md {
+      &-1 {
+        @include section-divider-md;
+        grid-area: divider-md-1;
+      }
+      &-2 {
+        @include section-divider-md;
+        grid-area: divider-md-2;
+      }
+      &-3 {
+        @include section-divider-md;
+        grid-area: divider-md-3;
+      }
+      &-4 {
+        @include section-divider-md;
+        grid-area: divider-md-4;
+      }
+      &-5 {
+        @include section-divider-md;
+        grid-area: divider-md-5;
+      }
+      &-6 {
+        @include section-divider-md;
+        grid-area: divider-md-6;
+        display: none;
+
+        @include media(">=desktop") {
+          display: block;
+        }
+      }
+    }
+  }
 }
