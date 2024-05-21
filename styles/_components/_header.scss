@@ -183,6 +183,12 @@
     gap: 10px;
   }
 
+  &__link {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &__title {
     grid-area: nav-title;
   }
@@ -202,6 +208,10 @@
   &__social {
     text-decoration: underline;
     text-underline-offset: 3px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__close {

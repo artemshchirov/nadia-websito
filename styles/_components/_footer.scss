@@ -139,6 +139,13 @@
     }
   }
 
+  &__mail {
+    background: #000;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &__socials {
     grid-area: socials;
     padding-top: 50px;

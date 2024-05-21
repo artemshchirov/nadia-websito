@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" id="contacts">
     <p class="footer__year">.2024</p>
     <h2 class="footer__title">Contacts</h2>
     <ul class="footer__links">
@@ -24,7 +24,9 @@
     </ul>
     <div class="footer__contact">
       <p>+972549029191</p>
-      <NuxtLink href="mailto:nadyabeson@gmail.com">nadyabeson@gmail.com</NuxtLink>
+      <NuxtLink class="footer__mail" href="mailto:nadyabeson@gmail.com"
+        >nadyabeson@gmail.com</NuxtLink
+      >
     </div>
     <p class="footer__copyright">Ⓒ All Rights Reserved</p>
     <p class="footer__authors">

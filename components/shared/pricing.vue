@@ -1,6 +1,6 @@
 <!-- TODO: Dynamic margins and spacing -->
 <template>
-  <ul class="pricing">
+  <ul class="pricing" id="services">
     <li class="pricing__item">
       <h3 class="pricing__title">Portrait photoshoot</h3>
       <div class="pricing__row">

@@ -26,15 +26,17 @@ const { isMenuOpen, toggleMenu } = useMenu();
         </NuxtLink>
 
         <ul class="nav__links">
-          <li class="nav__item"><NuxtLink class="nav__link" href="#about">About</NuxtLink></li>
           <li class="nav__item">
-            <NuxtLink class="nav__link" href="#portfolio">Portfolio</NuxtLink>
+            <NuxtLink class="nav__link" href="/about">About</NuxtLink>
           </li>
           <li class="nav__item">
-            <NuxtLink class="nav__link" href="#services">Services</NuxtLink>
+            <NuxtLink class="nav__link" href="/portfolio">Portfolio</NuxtLink>
           </li>
           <li class="nav__item">
-            <NuxtLink class="nav__link" href="#contacts">Contacts</NuxtLink>
+            <NuxtLink class="nav__link" href="#services" @click="toggleMenu">Services</NuxtLink>
+          </li>
+          <li class="nav__item">
+            <NuxtLink class="nav__link" href="#contacts" @click="toggleMenu">Contacts</NuxtLink>
           </li>
         </ul>
 
