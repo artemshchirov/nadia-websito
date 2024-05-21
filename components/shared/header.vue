@@ -26,16 +26,16 @@ const { isMenuOpen, toggleMenu } = useMenu();
         </NuxtLink>
 
         <ul class="nav__links">
-          <li class="nav__item">
+          <li>
             <NuxtLink class="nav__link" href="/about" @click="toggleMenu">About</NuxtLink>
           </li>
-          <li class="nav__item">
+          <li>
             <NuxtLink class="nav__link" href="/portfolio" @click="toggleMenu">Portfolio</NuxtLink>
           </li>
-          <li class="nav__item">
+          <li>
             <NuxtLink class="nav__link" href="#services" @click="toggleMenu">Services</NuxtLink>
           </li>
-          <li class="nav__item">
+          <li>
             <NuxtLink class="nav__link" href="#contacts" @click="toggleMenu">Contacts</NuxtLink>
           </li>
         </ul>
@@ -43,7 +43,7 @@ const { isMenuOpen, toggleMenu } = useMenu();
         <p class="nav__text">Content</p>
 
         <ul class="nav__socials">
-          <li class="nav__item">
+          <li>
             <NuxtLink
               class="nav__social"
               href="https://www.instagram.com/nadyabeson"
@@ -51,12 +51,12 @@ const { isMenuOpen, toggleMenu } = useMenu();
               >Instagram</NuxtLink
             >
           </li>
-          <li class="nav__item">
+          <li>
             <NuxtLink class="nav__social" href="https://t.me/NadyaBeson" target="_blank"
               >Telegram</NuxtLink
             >
           </li>
-          <li class="nav__item">
+          <li>
             <NuxtLink
               class="nav__social"
               href="https://api.whatsapp.com/send?phone=972549029191"
@@ -68,16 +68,25 @@ const { isMenuOpen, toggleMenu } = useMenu();
 
         <div class="nav__contact">
           <p>+972549029191</p>
-          <NuxtLink href="mailto:nadyabeson@gmail.com">nadyabeson@gmail.com</NuxtLink>
+          <NuxtLink href="mailto:nadyabeson@gmail.com" class="nav__mail"
+            >nadyabeson@gmail.com</NuxtLink
+          >
         </div>
 
         <p class="nav__copyright">Ⓒ All Rights Reserved</p>
         <p class="nav__year">.2024</p>
 
         <p class="nav__authors">
-          Created&nbsp;by&nbsp;Butcher/<br
-            class="nav__authors_multiline"
-          />Developed&nbsp;by&nbsp;Ɐrtem
+          <NuxtLink class="nav__mail" href="https://butcher.studio/" target="_blank">
+            Created&nbsp;by&nbsp;Butcher/</NuxtLink
+          >
+          <br />
+          <NuxtLink
+            class="nav__mail"
+            href="https://artemshchirov.github.io/portfolio/"
+            target="_blank"
+            >Developed&nbsp;by&nbsp;Ɐrtem</NuxtLink
+          >
         </p>
       </div>
     </div>

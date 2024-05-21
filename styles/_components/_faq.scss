@@ -123,14 +123,24 @@
 }
 
 .tab__label::after {
-  content: "+";
+  content: "";
+  display: inline-block;
   width: 20px;
   height: 20px;
+  background-image: url("https://ik.imagekit.io/webbuilder/nadia-websito/icons/plus_Qw9PNYVgY.svg?updatedAt=1716306855934");
+  background-size: contain;
+  background-repeat: no-repeat;
   text-align: center;
-  transition: all 0.35s;
+  transition: all 0.4s;
+  margin: auto 0;
+
+  @include media(">=tablet") {
+    width: 30px;
+    height: 3;
+  }
 }
 .tab input:checked + .tab__label::after {
-  content: "−";
+  background-image: url("https://ik.imagekit.io/webbuilder/nadia-websito/icons/minus_aO3naaL7Y.svg?updatedAt=1716306905907");
 }
 
 .tab__close {

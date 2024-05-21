@@ -154,6 +154,13 @@
     gap: 10px;
     color: #aeaeae;
   }
+  &__mail {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
 
   &__copyright {
     grid-area: nav-copyright;
@@ -168,6 +175,7 @@
   &__authors {
     grid-area: nav-authors;
     color: #aeaeae;
+    display: flex;
 
     &_multiline {
       @include media(">=tablet") {
@@ -184,6 +192,8 @@
   }
 
   &__link {
+    transition: $transition;
+
     &:hover {
       opacity: 0.8;
     }
@@ -208,6 +218,7 @@
   &__social {
     text-decoration: underline;
     text-underline-offset: 3px;
+    transition: $transition;
 
     &:hover {
       opacity: 0.8;

@@ -1,4 +1,9 @@
 .link {
+  transition: $transition;
+  &:hover {
+    opacity: 0.8;
+  }
+
   &-about {
     grid-area: link-about;
     margin: auto 0 0 auto;

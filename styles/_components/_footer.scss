@@ -67,6 +67,11 @@
   &__location {
     grid-area: footer__location;
     padding-top: 50px;
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     @include media(">=tablet") {
       padding-top: 0;
@@ -117,6 +122,14 @@
     }
   }
 
+  &__link {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
   &__contact {
     grid-area: contact;
     padding-top: 50px;
@@ -141,6 +154,8 @@
 
   &__mail {
     background: #000;
+    transition: $transition;
+
     &:hover {
       opacity: 0.8;
     }
@@ -160,6 +175,14 @@
 
     @include media(">=largeScreen") {
       gap: 10px;
+    }
+  }
+
+  &__social {
+    transition: $transition;
+
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

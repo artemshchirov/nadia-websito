@@ -70,12 +70,21 @@
       font-weight: 300;
       line-height: 1.2;
       letter-spacing: -0.24px;
-      max-width: max-content;
+      max-width: 530px;
+      margin-right: auto;
+      margin-left: 0;
     }
 
     @include media(">=desktop") {
       margin: 0 auto 0 0;
       font-size: 46px;
+      max-width: 1030px;
+    }
+
+    @include media(">=largeScreen") {
+      font-size: 62px;
+      max-width: 1400px;
+      // letter-spacing: -0.62px;
     }
   }
 }

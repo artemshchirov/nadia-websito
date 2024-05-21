@@ -1,3 +1,5 @@
+<script></script>
+
 <template>
   <section class="page">
     <div class="about section">
@@ -111,6 +113,7 @@
       />
 
       <NuxtImg
+        id="services"
         class="image image-about-12"
         src="https://ik.imagekit.io/webbuilder/nadia-websito/about/IMG_1955%201_KLvrV-g0R.webp?updatedAt=1713214365494"
         alt="Nadya Besson"
