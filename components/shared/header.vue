@@ -27,10 +27,10 @@ const { isMenuOpen, toggleMenu } = useMenu();
 
         <ul class="nav__links">
           <li class="nav__item">
-            <NuxtLink class="nav__link" href="/about">About</NuxtLink>
+            <NuxtLink class="nav__link" href="/about" @click="toggleMenu">About</NuxtLink>
           </li>
           <li class="nav__item">
-            <NuxtLink class="nav__link" href="/portfolio">Portfolio</NuxtLink>
+            <NuxtLink class="nav__link" href="/portfolio" @click="toggleMenu">Portfolio</NuxtLink>
           </li>
           <li class="nav__item">
             <NuxtLink class="nav__link" href="#services" @click="toggleMenu">Services</NuxtLink>

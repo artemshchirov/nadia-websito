@@ -3,9 +3,9 @@
     <p class="footer__year">.2024</p>
     <h2 class="footer__title">Contacts</h2>
     <ul class="footer__links">
-      <li><NuxtLink href="#about">About</NuxtLink></li>
+      <li><NuxtLink href="/about">About</NuxtLink></li>
       <li><NuxtLink href="#services">Services</NuxtLink></li>
-      <li><NuxtLink href="#portfolio">Portfolio</NuxtLink></li>
+      <li><NuxtLink href="/portfolio">Portfolio</NuxtLink></li>
       <li><NuxtLink href="#contacts">Contacts</NuxtLink></li>
       <li><NuxtLink to="#faq">FAQ</NuxtLink></li>
     </ul>
