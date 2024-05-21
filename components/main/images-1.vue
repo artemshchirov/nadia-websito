@@ -1,5 +1,11 @@
 <template>
   <NuxtImg
+    class="image image-main-10"
+    src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(19)_7kB86R3Ma.webp?updatedAt=1711983591947"
+    alt="Nadia"
+  />
+
+  <NuxtImg
     class="image image-main-11"
     src="https://ik.imagekit.io/webbuilder/nadia-websito/main/photo%20(24)_70NE-0pD2.webp?updatedAt=1711983593390"
     alt="Nadia"

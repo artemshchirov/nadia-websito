@@ -4,11 +4,12 @@
   font-size: 25px;
   font-weight: 300;
   max-width: 330px;
+  text-align: start;
 
   @include media(">=tablet") {
     font-size: 46px;
     text-align: end;
-    max-width: 561px;
+    max-width: 585px;
     margin-left: auto;
     margin-right: 0;
   }
@@ -27,6 +28,36 @@
     text-align: end;
     margin-left: auto;
     margin-right: 0;
+  }
+
+  &_about .areas_responsive {
+    &_sm {
+      @include media(">=tablet") {
+        display: none;
+      }
+    }
+
+    &_lg {
+      display: none;
+      @include media(">=tablet") {
+        display: block;
+      }
+    }
+  }
+
+  &_responsive {
+    &_sm {
+      @include media(">=desktop") {
+        display: none;
+      }
+    }
+
+    &_lg {
+      display: none;
+      @include media(">=desktop") {
+        display: block;
+      }
+    }
   }
 
   &_goal {

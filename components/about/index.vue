@@ -69,7 +69,7 @@
         alt="Nadya Besson"
       />
 
-      <h2 class="areas areas_about">Portrait / Love&Family / Food / Animals / Outdoor</h2>
+      <SharedAreas is-about-page />
 
       <NuxtImg
         class="image image-about-8"

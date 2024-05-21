@@ -9,7 +9,7 @@
 
       <MainAuthor />
 
-      <MainAreas />
+      <SharedAreas />
 
       <MainImages1 />
 
